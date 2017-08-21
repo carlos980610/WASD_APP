@@ -17,6 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layout/splash_screen',
+                            'src/main/res/layout/main_screen',
+                            'src/main/res/layout/login_screen',
+                            'src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {
@@ -26,6 +37,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
 }

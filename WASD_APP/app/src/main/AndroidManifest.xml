@@ -8,25 +8,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
-        <activity android:name=".Login_Main_Screen">
+        android:theme="@style/Theme.AppCompat">
+        <activity android:name=".Classes_Login_Screen.Login_Main_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Sing_In_Screen" />
-        <activity android:name=".Sing_Up_Screen" />
+        <activity android:name=".Classes_Login_Screen.Login_Sing_Up_Screen" />
+        <activity android:name=".Classes_Login_Screen.Login_Sing_In_Screen" />
         <activity
-            android:name=".Main_Screen"
-            android:label="@string/title_activity_main__screen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Profile_Main_Screen"
-            android:label="@string/title_activity_profile__main__screen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Splash_Screen"></activity>
+            android:name=".Classes_Main_Screen.Main_Main_Screen"
+            android:label="@string/title_activity_main__main__screen" />
+        <activity android:name=".Classes_Splash_Screen.Splash_Main_Screen"></activity>
     </application>
 
 </manifest>
