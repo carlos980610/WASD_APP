@@ -7,11 +7,20 @@
     tools:context="com.example.carlosandres.wasd_app.Classes_Login_Screen.Login_Main_Screen">
 
     <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="329dp" />
+
+    <Button
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="246dp"
+        android:layout_height="42dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="142dp" />
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="247dp" />
 </android.support.constraint.ConstraintLayout>
