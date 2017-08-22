@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.carlosandres.wasd_app.Classes_Splash_Screen.Splash_Main_Screen">
 
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="478dp"
+        android:src="@drawable/main"
+        />
+
 </android.support.constraint.ConstraintLayout>
