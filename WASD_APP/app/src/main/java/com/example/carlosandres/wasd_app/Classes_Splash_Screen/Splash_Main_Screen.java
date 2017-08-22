@@ -14,7 +14,7 @@ public class Splash_Main_Screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);   //Se elimina el toolbar de la actividad de inicio.
         setContentView(R.layout.activity_splash_main_screen);
 
 
