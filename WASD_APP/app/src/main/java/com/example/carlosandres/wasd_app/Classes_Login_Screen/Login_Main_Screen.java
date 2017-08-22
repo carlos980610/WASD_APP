@@ -21,6 +21,7 @@ public class Login_Main_Screen extends AppCompatActivity {
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent (getApplicationContext(), Login_Sing_In_Screen.class);
                 startActivity(intent);
             }
         });
