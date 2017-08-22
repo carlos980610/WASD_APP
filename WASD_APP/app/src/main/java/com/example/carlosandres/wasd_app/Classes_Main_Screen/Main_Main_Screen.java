@@ -38,7 +38,7 @@ public class Main_Main_Screen extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_main_screen);
 
-        mNavigationDrawerFragment = (NavigationDrawerFragment)
+        /*mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
@@ -46,14 +46,14 @@ public class Main_Main_Screen extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-    }
+    */}
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+        //        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
     }
 
@@ -117,5 +117,8 @@ public class Main_Main_Screen extends Activity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
+    /*@Override
+    public void onBackPressed(){
+    }*/
 
 }
