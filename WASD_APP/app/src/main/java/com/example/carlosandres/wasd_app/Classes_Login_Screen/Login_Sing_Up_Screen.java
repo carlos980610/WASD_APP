@@ -16,7 +16,7 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_sing_up_screen);
-
+/*
 
         final Button btnSingIn = (Button) findViewById(R.id.btnSingIn);
         btnSingIn.setOnClickListener(new View.OnClickListener() {
@@ -25,11 +25,12 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                     Intent intent = new Intent (getApplicationContext(), Login_Main_Screen.class);
+                    Intent intent = new Intent (getApplicationContext(), Login_Main_Screen.class);
                     startActivity(intent);
 
             }
         });
-
+*/
     }
 
 

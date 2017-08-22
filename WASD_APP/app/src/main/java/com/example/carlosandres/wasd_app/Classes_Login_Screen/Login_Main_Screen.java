@@ -14,8 +14,8 @@ public class Login_Main_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main_screen);
 
-        final Button btnLogIn = (Button) findViewById(R.id.btnSingIn);
-        btnLogIn.setOnClickListener(new View.OnClickListener() {
+        final Button btnSingIn = (Button) findViewById(R.id.btnSingIn);
+        btnSingIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (getApplicationContext(), Login_Sing_In_Screen.class);
