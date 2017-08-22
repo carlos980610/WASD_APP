@@ -72,7 +72,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.692" />
         android:layout_marginTop="260dp"
         app:layout_constraintHorizontal_bias="0.503"
         android:layout_marginBottom="0dp"
@@ -84,14 +84,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="84dp"
         android:text="¿Olvidaste tu contraseña?"
         android:textSize="12sp"
         android:textStyle="italic"
-        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="231dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintHorizontal_bias="0.965" />
 
     <EditText
         android:id="@+id/editText4"
@@ -101,5 +101,13 @@
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="194dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mantener sesión iniciada"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="246dp" />
 
 </android.support.constraint.ConstraintLayout>
