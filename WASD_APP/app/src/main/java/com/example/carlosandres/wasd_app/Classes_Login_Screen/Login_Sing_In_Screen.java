@@ -20,16 +20,13 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_sing_in_screen);
 
-        final EditText User = (EditText) findViewById(R.id.edtUser);
-        final EditText Pass = (EditText) findViewById(R.id.edtPass);
+        final EditText User = (EditText) findViewById(R.id.txtUser);
+        final EditText Pass = (EditText) findViewById(R.id.txtPassword);
 
-        final Button btnLogIn = (Button) findViewById(R.id.btnLogIn);
+        final Button btnLogIn = (Button) findViewById(R.id.btnSingIn);
         btnLogIn.setOnClickListener(new View.OnClickListener() {
-
-
                 @Override
                 public void onClick(View v) {
-
                     if(User.getText().toString().equals("User") && Pass.getText().toString().equals("Password")){
                         Intent intent = new Intent (getApplicationContext(), Main_Main_Screen.class);
                         startActivity(intent);

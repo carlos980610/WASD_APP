@@ -18,8 +18,8 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
         setContentView(R.layout.activity_login_sing_up_screen);
 
 
-        final Button btnSingUp = (Button) findViewById(R.id.btnSingUp);
-        btnSingUp.setOnClickListener(new View.OnClickListener() {
+        final Button btnSingIn = (Button) findViewById(R.id.btnSingIn);
+        btnSingIn.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
