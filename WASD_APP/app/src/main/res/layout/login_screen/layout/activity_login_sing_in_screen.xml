@@ -6,4 +6,63 @@
     android:layout_height="match_parent"
     tools:context="com.example.carlosandres.wasd_app.Classes_Login_Screen.Login_Sing_In_Screen">
 
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="125dp"
+        android:layout_height="47dp"
+        android:text="Log In"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_marginBottom="72dp" />
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogIn" />
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="User"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="260dp"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtPass"
+        app:layout_constraintVertical_bias="0.522" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="84dp"
+        android:text="¿Olvidaste tu cuenta?"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="366dp" />
 </android.support.constraint.ConstraintLayout>
