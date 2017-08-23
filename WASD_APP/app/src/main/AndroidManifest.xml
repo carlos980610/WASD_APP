@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
-        <activity android:name=".Classes_Login_Screen.Login_Main_Screen">
-
-        </activity>
+        <activity android:name=".Classes_Login_Screen.Login_Main_Screen"></activity>
         <activity android:name=".Classes_Login_Screen.Login_Sing_Up_Screen" />
         <activity android:name=".Classes_Login_Screen.Login_Sing_In_Screen" />
         <activity android:name=".Classes_Splash_Screen.Splash_Main_Screen">

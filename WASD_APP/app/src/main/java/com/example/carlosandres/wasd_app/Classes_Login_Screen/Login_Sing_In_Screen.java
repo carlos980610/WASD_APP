@@ -26,7 +26,7 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
         btnLogIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(User.getText().toString().equals("User") && Pass.getText().toString().equals("Password")){
+                    if(User.getText().toString().equals("") && Pass.getText().toString().equals("")){
                         Intent intent = new Intent (getApplicationContext(), Main_Main_Screen.class);
                         startActivity(intent);
                     }else{

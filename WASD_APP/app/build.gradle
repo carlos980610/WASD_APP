@@ -21,8 +21,8 @@ android {
         main {
             res.srcDirs =
                     [
-                            'src/main/res/layout/splash_screen',
                             'src/main/res/layout/main_screen',
+                            'src/main/res/layout/splash_screen',
                             'src/main/res/layout/login_screen',
                             'src/main/res',
                             'src/main/res/layout/Publication'
