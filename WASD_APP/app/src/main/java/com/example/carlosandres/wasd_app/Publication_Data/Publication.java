@@ -1,5 +1,7 @@
 package com.example.carlosandres.wasd_app.Publication_Data;
 
+import com.example.carlosandres.wasd_app.Classes_Main_Screen.*;
+
 public class Publication {
 
     private int PublicationImg;
@@ -7,7 +9,7 @@ public class Publication {
     private String NumComent;
     private String NumPro;
 
-    public Publication(){
+    public Publication(int PublicationImg, String PublicationText, String NumComent, String NumPro){
 
         this.PublicationImg = PublicationImg;
         this.PublicationText = PublicationText;

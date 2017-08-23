@@ -1,1 +1,3 @@
-<resources></resources>
+<resources>
+    <string name="title_activity_main__main__screen">Main_Main_Screen</string>
+</resources>
