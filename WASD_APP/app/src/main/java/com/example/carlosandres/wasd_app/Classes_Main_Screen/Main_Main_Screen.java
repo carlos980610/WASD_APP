@@ -2,8 +2,11 @@ package com.example.carlosandres.wasd_app.Classes_Main_Screen;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.design.widget.TabLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.example.carlosandres.wasd_app.Publication_Data.Publication;
 import com.example.carlosandres.wasd_app.Publication_Data.Publication_Adapter;
@@ -12,7 +15,7 @@ import com.example.carlosandres.wasd_app.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main_Main_Screen extends Activity {
+public class Main_Main_Screen extends AppCompatActivity {
 
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
@@ -22,6 +25,7 @@ public class Main_Main_Screen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_main_screen);
+
 
         List<Publication> items = new ArrayList<>();
 
@@ -36,11 +40,8 @@ public class Main_Main_Screen extends Activity {
 
         adapter = new Publication_Adapter(items);
         recycler.setAdapter(adapter);
+
     }
-
-
-
-
 
 
 
