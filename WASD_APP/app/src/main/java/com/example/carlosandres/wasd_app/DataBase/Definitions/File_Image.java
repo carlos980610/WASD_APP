@@ -5,7 +5,7 @@ package com.example.carlosandres.wasd_app.DataBase.Definitions;
  */
 
 public class File_Image {
-    public static final String Publication_Table_Name = "tblFile_Image";
+    public static final String File_Image_Table_Name = "tblFile_Image";
 
     public static final String Img_Id_File_Publication = "Id_File_Publication_Img";
     public static final String Img_Publication = "Publication_Img";

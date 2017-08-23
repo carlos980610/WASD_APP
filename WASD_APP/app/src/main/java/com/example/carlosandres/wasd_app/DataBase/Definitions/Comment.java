@@ -6,7 +6,7 @@ package com.example.carlosandres.wasd_app.DataBase.Definitions;
 
 public class Comment {
 
-    public static final String Publication_Table_Name = "tblPublication";
+    public static final String Publication_Table_Name = "tblComment";
 
     public static final String Comment_Id = "Id_Comment";
     public static final String Comment_User_Comment = "User_Comment";

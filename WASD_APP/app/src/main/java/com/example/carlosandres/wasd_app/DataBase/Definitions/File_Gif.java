@@ -6,7 +6,7 @@ package com.example.carlosandres.wasd_app.DataBase.Definitions;
 
 public class File_Gif {
 
-    public static final String Publication_Table_Name = "tblFile_Gif";
+    public static final String File_Gif_Table_Name = "tblFile_Gif";
 
     public static final String Gif_Id_File_Publication = "Id_File_Publication_Gif";
     public static final String Gif_Publication = "Publication_Gif";
