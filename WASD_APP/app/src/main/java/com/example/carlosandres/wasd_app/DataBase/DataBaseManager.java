@@ -28,23 +28,23 @@ public class DataBaseManager {
 
     /** Manage Data Base **/
     //Constructor Method
- /*   public DataBaseManager (Context context) {
+    public DataBaseManager (Context context) {
         connection = new Connection(context);
         database = connection.getWritableDatabase();
     }
 
- /*   //Method to open data base
-  /*  public void OpenDataBase (Context context){
-        connection = new Connection(context);
-        connection.getWritableDatabase();
-    }*/
-
-    //Method to close data base
-  /*  public void OpenDataBase (Context context){
+    //Method to open data base
+    public void OpenDataBase (Context context){
         connection = new Connection(context);
         connection.getWritableDatabase();
     }
-*/
+
+    //Method to close data base
+    public void OpenDataBase (Context context){
+        connection = new Connection(context);
+        connection.getWritableDatabase();
+    }
+
 
 
 
