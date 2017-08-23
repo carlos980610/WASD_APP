@@ -9,7 +9,14 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id='@+id/recycler'
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"/>
+    </FrameLayout>
     <fragment
         android:id="@+id/navigation_drawer"
         android:name="com.example.carlosandres.wasd_app.Classes_Main_Screen.NavigationDrawerFragment"
