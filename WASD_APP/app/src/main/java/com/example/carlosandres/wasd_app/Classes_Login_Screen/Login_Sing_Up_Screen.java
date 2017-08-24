@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
 import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
+import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Sing_Up;
 import com.example.carlosandres.wasd_app.R;
 
 public class Login_Sing_Up_Screen extends AppCompatActivity {
@@ -72,12 +73,23 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
 
                         User_Entity new_user = new User_Entity();
                         new_user.Name_User = User_Name;
-                        new_user.Password= password.getText().toString();
-                        new_user.Email= email.getText().toString();
-                        new_user.Carrer=carrer.getSelectedItem().toString();
-                        lstusers.add(user);
+                        new_user.Last_Name_User = User_Last_Name;
+                        new_user.Password_User= User_Password;
+                        new_user.Email_User= User_Email;
+                        new_user.NickName_User = User_NickName;
+                        new_user.Age_User = User_Age;
+                        new_user.CellPhone_User = User_Cellphone;
 
-
+                        if(User_Name !="" && User_Name.length()> 3 && User_Last_Name !="" && User_Last_Name.length() > 3 && User_Password !="" && User_Password.length() > 3) {
+                            if(User_Age !="" && User_Email !="" && User_NickName !="" && User_NickName.length() > 3 && User_Cellphone !="" && User_Cellphone.length() == 10 && User_Email !=""){
+                                //SP_Sing_Up(App_Context, new_user);
+                                Toast.makeText(getApplicationContext(), "Registro realizado con exito", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), Login_Main_Screen.class);
+                                startActivity(intent);
+                            }
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Por favor verificar todos los campos", Toast.LENGTH_SHORT).show();
+                        }
 
                     }catch (Exception exception){
                         Toast.makeText(getApplicationContext(), "No se ha logrado establecer la conexión, intentelo de nuevo más tarde", Toast.LENGTH_SHORT).show();
@@ -86,8 +98,6 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplicationContext(), "No se han aceptado los terminos y condiciones de WASD", Toast.LENGTH_SHORT).show();
                 }
-                    Intent intent = new Intent(getApplicationContext(), Login_Main_Screen.class);
-                    startActivity(intent);
 
             }
         });
