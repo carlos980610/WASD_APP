@@ -36,10 +36,16 @@ public class SP_Sing_Up {
 
     private void Add_New_User (){
 
-        //Establish data base connection
+        //Establish and open data base connection
         DataBaseManager DBManager = new DataBaseManager(App_Context);
         DBConnection = new Connection(App_Context);
         SQLDataBase = DBConnection.getWritableDatabase();
+
+
+
+
+        //Close data base connection
+        DBConnection.Close();
 
     }
 }
