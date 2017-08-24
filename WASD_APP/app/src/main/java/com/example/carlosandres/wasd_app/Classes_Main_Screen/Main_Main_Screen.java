@@ -3,6 +3,7 @@ package com.example.carlosandres.wasd_app.Classes_Main_Screen;
 import android.os.Bundle;
 import android.app.Activity;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,6 +23,9 @@ public class Main_Main_Screen extends AppCompatActivity {
     private RecyclerView.LayoutManager IManager;
 
     private Toolbar toolbar;
+
+
+    private static ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,15 @@ public class Main_Main_Screen extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle("WASD");
+
+        /*TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+
+        tabs.addTab(tabs.newTab().setText("Main"));
+        tabs.addTab(tabs.newTab().setText("Chat"));
+        tabs.addTab(tabs.newTab().setText("Profile"));
+*/
+        //tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
+
     }
 
 }
