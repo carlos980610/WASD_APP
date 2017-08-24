@@ -71,8 +71,7 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                         //Fill in ArrayList
 
                         User_Entity new_user = new User_Entity();
-                        new_user.Id_User = User_Name;
-                        new_user.Name= name.getText().toString();
+                        new_user.Name_User = User_Name;
                         new_user.Password= password.getText().toString();
                         new_user.Email= email.getText().toString();
                         new_user.Carrer=carrer.getSelectedItem().toString();
