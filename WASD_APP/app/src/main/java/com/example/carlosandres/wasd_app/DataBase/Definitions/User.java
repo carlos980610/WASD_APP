@@ -11,9 +11,10 @@ public class User {
     public static final String User_Id = "Id_User";
     public static final String User_Name = "Name_User";
     public static final String User_Last_Name = "Last_Name_User";
-    public static final String User_Nick_Name = "Nick_Name_User";
+    public static final String User_Nick_Name = "NickName_User";
     public static final String User_Age = "Age_User";
     public static final String User_Email = "Email_User";
+    public static final String User_Password = "Password_User";
     public static final String User_Cellphone = "Cellphone_User";
 
 
