@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
+import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
 import com.example.carlosandres.wasd_app.R;
 
 public class Login_Sing_Up_Screen extends AppCompatActivity {
@@ -67,10 +68,15 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                         User_Cellphone = txtUser_Cellphone.getText().toString();
 
 
-                        //Data Base Process
+                        //Fill in ArrayList
 
-                        DataBaseManager DBManager = new DataBaseManager(App_Context);
-                        DBManager.OpenDataBase(App_Context);
+                        User_Entity new_user = new User_Entity();
+                        new_user.Id_User = User_Name;
+                        new_user.Name= name.getText().toString();
+                        new_user.Password= password.getText().toString();
+                        new_user.Email= email.getText().toString();
+                        new_user.Carrer=carrer.getSelectedItem().toString();
+                        lstusers.add(user);
 
 
 
