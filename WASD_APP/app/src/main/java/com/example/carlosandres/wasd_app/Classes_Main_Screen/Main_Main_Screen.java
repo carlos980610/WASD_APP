@@ -21,6 +21,8 @@ public class Main_Main_Screen extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager IManager;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +43,9 @@ public class Main_Main_Screen extends AppCompatActivity {
         adapter = new Publication_Adapter(items);
         recycler.setAdapter(adapter);
 
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
     }
-
-
 
 }
