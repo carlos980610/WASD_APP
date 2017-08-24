@@ -36,6 +36,7 @@ public class DataBaseManager {
             User.User_Nick_Name + " TEXT, " +
             User.User_Age + " TEXT, " +
             User.User_Email + " TEXT, " +
+            User.User_Password + " TEXT, " +
             User.User_Cellphone + " TEXT);";
 
 
@@ -53,7 +54,7 @@ public class DataBaseManager {
             Comment.Comment_User_Comment + " TEXT, " +
             Comment.Comment_DataTime + " TEXT, " +
             Comment.Comment_Content + " TEXT, " +
-            Comment.Comment_Id_Publication + " TEXT);";*/
+            Comment.Comment_Id_Publication + " TEXT);";
 
     //Create tblPersonalChat
     public static final String Create_Table_Personal_Chat = "CREATE TABLE IF NOT EXISTS " + Personal_Chat.Publication_Table_Name + "(" +
@@ -71,17 +72,17 @@ public class DataBaseManager {
     //Create tblFile_Gif
     public static final String Create_Table_File_Gif = "CREATE TABLE IF NOT EXISTS " + File_Gif.File_Gif_Table_Name + "(" +
             File_Gif.Gif_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            File_Gif.Gif_Publication + " TEXT);";*/
+            File_Gif.Gif_Publication + " BLOB);";
 
     //Create tblFile_Video
     public static final String Create_Table_File_Video = "CREATE TABLE IF NOT EXISTS " + File_Video.File_Video_Table_Name + "(" +
             File_Video.Vid_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            File_Video.Vid_Publication + " TEXT);";*/
+            File_Video.Vid_Publication + " BLOB);";
 
     //Create tblFile_Image
     public static final String Create_Table_File_Image = "CREATE TABLE IF NOT EXISTS " + File_Image.File_Image_Table_Name + "(" +
             File_Image.Img_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            File_Image.Img_Publication + " TEXT);";*/
+            File_Image.Img_Publication + " BLOB);";
 
 
 
@@ -105,11 +106,10 @@ public class DataBaseManager {
     }
 
     //Method to close data base
-    public void OpenDataBase (Context context){
+    public void CloseDataBase (Context context){
         connection = new Connection(context);
         connection.getWritableDatabase();
     }
-
 
 
 
