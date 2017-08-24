@@ -99,7 +99,7 @@ public class DataBaseManager {
         connection = new Connection(context);
         database = connection.getWritableDatabase();
     }
-/*
+
     //Method to open data base
     public void OpenDataBase (Context context){
         connection = new Connection(context);
@@ -110,7 +110,7 @@ public class DataBaseManager {
     public void CloseDataBase (Context context){
         connection = new Connection(context);
         connection.getWritableDatabase();
-    }*/
+    }
 
 
 
