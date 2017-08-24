@@ -15,6 +15,9 @@ import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Sing_Up;
 import com.example.carlosandres.wasd_app.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Login_Sing_Up_Screen extends AppCompatActivity {
 
     /** Declare variables**/
@@ -25,6 +28,10 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
 
     //Get app context
     Context App_Context = this;
+
+
+    //Cheked variable
+    boolean Cheked_Storage_Procedures = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +77,7 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
 
 
                         //Fill in ArrayList
+                        List<User_Entity> List_New_User = new ArrayList<>();
 
                         User_Entity new_user = new User_Entity();
                         new_user.Name_User = User_Name;
@@ -79,13 +87,25 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                         new_user.NickName_User = User_NickName;
                         new_user.Age_User = User_Age;
                         new_user.CellPhone_User = User_Cellphone;
+                        List_New_User.add(new_user);
 
-                        if(User_Name !="" && User_Name.length()> 3 && User_Last_Name !="" && User_Last_Name.length() > 3 && User_Password !="" && User_Password.length() > 3) {
+                        if(User_Name.isEmpty() && User_Name.length()> 3 && !User_Last_Name.isEmpty() && User_Last_Name.length() > 3 && !User_Password.isEmpty() && User_Password.length() > 3) {
                             if(User_Age !="" && User_Email !="" && User_NickName !="" && User_NickName.length() > 3 && User_Cellphone !="" && User_Cellphone.length() == 10 && User_Email !=""){
-                                //SP_Sing_Up(App_Context, new_user);
-                                Toast.makeText(getApplicationContext(), "Registro realizado con exito", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), Login_Main_Screen.class);
-                                startActivity(intent);
+
+                                SP_Sing_Up Sing_Up_SP = new SP_Sing_Up(App_Context);
+                                Cheked_Storage_Procedures = Sing_Up_SP.Add_New_User(List_New_User);
+
+                                if (Cheked_Storage_Procedures){
+                                    Toast.makeText(getApplicationContext(), "Registro realizado con exito", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), Login_Main_Screen.class);
+                                    startActivity(intent);
+                                }else{
+                                    //TODO: fix message
+                                    Toast.makeText(getApplicationContext(), "Por favor verificar todos los campos", Toast.LENGTH_SHORT).show();
+
+                                }
+
+
                             }
                         }else{
                             Toast.makeText(getApplicationContext(), "Por favor verificar todos los campos", Toast.LENGTH_SHORT).show();

@@ -20,8 +20,8 @@ public class DataBaseManager {
 
 
     /** Declare variables**/
-    private Connection connection; //Variable with the connection to data base
-    private SQLiteDatabase database; //Variable with thee data base in general
+    private Connection DBConnection; //Variable with the connection to data base
+    private SQLiteDatabase SQLDataBase; //Variable with thee data base in general
 
 
     /** Create tables in DataBase **/
@@ -96,20 +96,19 @@ public class DataBaseManager {
     /** Manage Data Base **/
     //Constructor Method
     public DataBaseManager (Context context) {
-        connection = new Connection(context);
-        database = connection.getWritableDatabase();
+        DBConnection = new Connection(context);
+        SQLDataBase = DBConnection.getWritableDatabase();
     }
 
     //Method to open data base
-    public void OpenDataBase (Context context){
-        connection = new Connection(context);
-        connection.getWritableDatabase();
+    public Connection OpenDataBase (Context context){
+        DBConnection = new Connection(context);
+        return DBConnection;
     }
 
     //Method to close data base
-    public void CloseDataBase (Context context){
-        connection = new Connection(context);
-        connection.getWritableDatabase();
+    public void CloseDataBase (Connection connection){
+        connection.close();
     }
 
 
