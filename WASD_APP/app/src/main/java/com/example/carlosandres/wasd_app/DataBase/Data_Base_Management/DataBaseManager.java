@@ -72,29 +72,18 @@ public class DataBaseManager {
     //Create tblFile_Gif
     public static final String Create_Table_File_Gif = "CREATE TABLE IF NOT EXISTS " + File_Gif.File_Gif_Table_Name + "(" +
             File_Gif.Gif_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-<<<<<<< HEAD:WASD_APP/app/src/main/java/com/example/carlosandres/wasd_app/DataBase/Data_Base_Management/DataBaseManager.java
-            File_Gif.Gif_Publication + " TEXT);";
-=======
             File_Gif.Gif_Publication + " BLOB);";
->>>>>>> origin/master:WASD_APP/app/src/main/java/com/example/carlosandres/wasd_app/DataBase/Data_Base_Management/DataBaseManager.java
 
     //Create tblFile_Video
     public static final String Create_Table_File_Video = "CREATE TABLE IF NOT EXISTS " + File_Video.File_Video_Table_Name + "(" +
             File_Video.Vid_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-<<<<<<< HEAD:WASD_APP/app/src/main/java/com/example/carlosandres/wasd_app/DataBase/Data_Base_Management/DataBaseManager.java
-            File_Video.Vid_Publication + " TEXT);";
-=======
             File_Video.Vid_Publication + " BLOB);";
->>>>>>> origin/master:WASD_APP/app/src/main/java/com/example/carlosandres/wasd_app/DataBase/Data_Base_Management/DataBaseManager.java
 
     //Create tblFile_Image
     public static final String Create_Table_File_Image = "CREATE TABLE IF NOT EXISTS " + File_Image.File_Image_Table_Name + "(" +
             File_Image.Img_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-<<<<<<< HEAD:WASD_APP/app/src/main/java/com/example/carlosandres/wasd_app/DataBase/Data_Base_Management/DataBaseManager.java
-            File_Image.Img_Publication + " TEXT);";
-=======
             File_Image.Img_Publication + " BLOB);";
->>>>>>> origin/master:WASD_APP/app/src/main/java/com/example/carlosandres/wasd_app/DataBase/Data_Base_Management/DataBaseManager.java
+
 
 
 
