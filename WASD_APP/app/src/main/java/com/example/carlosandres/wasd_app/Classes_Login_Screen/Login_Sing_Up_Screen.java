@@ -10,8 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.carlosandres.wasd_app.DataBase.DataBaseManager;
-import com.example.carlosandres.wasd_app.DataBase.Definitions.User;
+import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
 import com.example.carlosandres.wasd_app.R;
 
 public class Login_Sing_Up_Screen extends AppCompatActivity {

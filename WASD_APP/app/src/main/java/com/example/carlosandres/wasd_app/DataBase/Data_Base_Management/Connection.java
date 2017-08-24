@@ -1,4 +1,4 @@
-package com.example.carlosandres.wasd_app.DataBase;
+package com.example.carlosandres.wasd_app.DataBase.Data_Base_Management;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
