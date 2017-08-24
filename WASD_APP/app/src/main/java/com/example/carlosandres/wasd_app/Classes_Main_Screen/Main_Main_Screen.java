@@ -46,6 +46,8 @@ public class Main_Main_Screen extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("WASD");
     }
 
 }

@@ -8,7 +8,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id='@+id/recycler'
-        android:layout_width="450dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="4dp"
         tools:layout_editor_absoluteX="8dp"
@@ -17,7 +17,7 @@
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/tool_bar"
-        android:layout_width="450dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1C1C1C"
         android:textAppearance="?android:attr/textAppearanceLarge"
