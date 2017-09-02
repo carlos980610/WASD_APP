@@ -25,10 +25,10 @@ public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapte
         public PublicationViewHolder(View v) {
             super(v);
 
-            PublicationImg = (ImageView) v.findViewById(R.id.PublicationImg);
-            PublicaciontText = (TextView) v.findViewById(R.id.PublicationText);
-            NumComent = (TextView) v.findViewById(R.id.NumComent);
-            NumPro = (TextView) v.findViewById(R.id.NumPro);
+            PublicationImg = (ImageView) v.findViewById(R.id.imgPublication);
+            PublicaciontText = (TextView) v.findViewById(R.id.txtPublishDescription);
+            NumComent = (TextView) v.findViewById(R.id.txtNumComments);
+            NumPro = (TextView) v.findViewById(R.id.txtNumberPro);
         }
     }
         public Publication_Adapter(List<Publication> items) {

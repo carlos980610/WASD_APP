@@ -1,4 +1,4 @@
-package com.example.carlosandres.wasd_app.Classes_Login_Screen;
+package com.example.carlosandres.wasd_app.Classes_Login_Screen.Sing_Up_Screen;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
+import com.example.carlosandres.wasd_app.Classes_Login_Screen.Main_Login_Screen.Login_Main_Screen;
 import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Sing_Up;
 import com.example.carlosandres.wasd_app.R;

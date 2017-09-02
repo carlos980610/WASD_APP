@@ -17,8 +17,10 @@
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/tool_bar"
         android:layout_width="450dp"
@@ -27,12 +29,12 @@
         tools:layout_editor_absoluteX="8dp">
 
         </android.support.v7.widget.Toolbar>
-<!--
+
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
--->
+
     </android.support.design.widget.AppBarLayout>
 
 

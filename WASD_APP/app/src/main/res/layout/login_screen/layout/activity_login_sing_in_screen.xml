@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.carlosandres.wasd_app.Classes_Login_Screen.Login_Sing_In_Screen">
+    tools:context="com.example.carlosandres.wasd_app.Classes_Login_Screen.Sing_In_Screen.Login_Sing_In_Screen">
 
     <TextView
         android:id="@+id/textView4"

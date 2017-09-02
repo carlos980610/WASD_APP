@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
-import com.example.carlosandres.wasd_app.Classes_Login_Screen.Login_Main_Screen;
+import com.example.carlosandres.wasd_app.Classes_Login_Screen.Main_Login_Screen.Login_Main_Screen;
 import com.example.carlosandres.wasd_app.R;
 
 public class Splash_Main_Screen extends AppCompatActivity {

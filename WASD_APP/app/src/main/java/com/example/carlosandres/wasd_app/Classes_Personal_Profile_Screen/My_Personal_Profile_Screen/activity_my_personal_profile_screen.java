@@ -13,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.carlosandres.wasd_app.R;
+
 public class activity_my_personal_profile_screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -84,7 +86,7 @@ public class activity_my_personal_profile_screen extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_slide show) {
 
         } else if (id == R.id.nav_manage) {
 
