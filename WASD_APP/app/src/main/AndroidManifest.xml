@@ -21,7 +21,12 @@
         </activity>
         <activity
             android:name=".Classes_Main_Screen.Main_Main_Screen"
-            android:label="@string/title_activity_main__main__screen"></activity>
+            android:label="@string/title_activity_main__main__screen" />
+        <activity
+            android:name=".Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.activity_my_personal_profile_screen"
+            android:label="@string/title_activity_my_personal_profile_screen"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.activity_your_personal_profile_screen"></activity>
     </application>
 
 </manifest>

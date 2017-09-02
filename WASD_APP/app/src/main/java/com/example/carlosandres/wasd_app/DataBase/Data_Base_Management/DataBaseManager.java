@@ -27,7 +27,6 @@ public class DataBaseManager {
     /** Create tables in DataBase **/
 
 
-
     //Create tblUser - Ok
     public static final String Create_Table_User = "CREATE TABLE IF NOT EXISTS " + User.User_Table_Name + "(" +
             User.User_Id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
