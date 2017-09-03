@@ -6,14 +6,14 @@ public class Publication {
 
     private int PublicationImg;
     private String PublicationText;
-    private String NumComment;
+    private String NumComent;
     private String NumPro;
 
     public Publication(int PublicationImg, String PublicationText, String NumComent, String NumPro){
 
         this.PublicationImg = PublicationImg;
         this.PublicationText = PublicationText;
-        this.NumComment = NumComent;
+        this.NumComent = NumComent;
         this.NumPro = NumPro;
     }
 
@@ -26,7 +26,7 @@ public class Publication {
     }
 
     public String getNumComent() {
-        return NumComment;
+        return NumComent;
     }
 
     public String getNumPro() {
