@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.carlosandres.wasd_app.R;
 
-public class activity_your_personal_profile_screen extends AppCompatActivity {
+public class Your_Personal_Profile_Screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

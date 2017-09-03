@@ -15,7 +15,7 @@ import android.view.MenuItem;
 
 import com.example.carlosandres.wasd_app.R;
 
-public class activity_my_personal_profile_screen extends AppCompatActivity
+public class My_Personal_Profile_Screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override

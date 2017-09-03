@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.activity_your_personal_profile_screen">
+    tools:context="com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.Your_Personal_Profile_Screen">
 
 </android.support.constraint.ConstraintLayout>

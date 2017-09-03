@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.activity_my_personal_profile_screen"
+    tools:context="com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen"
     tools:showIn="@layout/app_bar_activity_my_personal_profile_screen">
 
 </android.support.constraint.ConstraintLayout>
