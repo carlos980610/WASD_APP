@@ -86,7 +86,7 @@ public class activity_my_personal_profile_screen extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slide show) {
+        } else if (id == R.id.nav_camera) {
 
         } else if (id == R.id.nav_manage) {
 

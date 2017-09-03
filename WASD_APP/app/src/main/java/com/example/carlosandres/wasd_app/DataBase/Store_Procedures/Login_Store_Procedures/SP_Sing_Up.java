@@ -29,16 +29,16 @@ public class SP_Sing_Up {
     private Connection DBConnection;
     private SQLiteDatabase SQLDataBase;
 
-    //Cheked variables
-    boolean Successful = false;
+    //Checked procedure
+    boolean Successful = false; //Checked correct sing up
 
 
-    public SP_Sing_Up(Context Get_App_Context) {
+    public SP_Sing_Up(Context Get_App_Context) { //Class Constructor
         App_Context = Get_App_Context;
 
     }
 
-    public boolean Add_New_User (List<User_Entity> New_User_List){
+    public boolean Sing_Up_Procedure (List<User_Entity> New_User_List){
 
         //Establish and open data base connection
         DataBaseManager DBManager = new DataBaseManager(App_Context);

@@ -25,12 +25,11 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
     //Receive data from form
     private String User_Name, User_Last_Name, User_NickName, User_Age, User_Email, User_Password, User_Cellphone;
 
-
     //Get app context
     Context App_Context = this;
 
 
-    //Cheked variable
+    //Cheked procedures
     boolean Cheked_Storage_Procedures = false;
 
     @Override
@@ -40,8 +39,6 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
 
 
         /** Search values in activity xml**/
-
-
         //TextBox in Sing Up
         final EditText txtUser_Name = (EditText) findViewById(R.id.txtUserName);
         final EditText txtUser_Last_Name = (EditText) findViewById(R.id.txtUserLastName);
@@ -56,10 +53,8 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
 
 
         //SIng Up button
-        final Button btnSingIn = (Button) findViewById(R.id.btnSingIn);
-        btnSingIn.setOnClickListener(new View.OnClickListener() {
-
-
+        final Button btnSingUp = (Button) findViewById(R.id.btnSingUp);
+        btnSingUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -89,11 +84,11 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                         new_user.CellPhone_User = User_Cellphone;
                         List_New_User.add(new_user);
 
-                        if(User_Name.isEmpty() && User_Name.length()> 3 && !User_Last_Name.isEmpty() && User_Last_Name.length() > 3 && !User_Password.isEmpty() && User_Password.length() > 3) {
-                            if(User_Age !="" && User_Email !="" && User_NickName !="" && User_NickName.length() > 3 && User_Cellphone !="" && User_Cellphone.length() == 10 && User_Email !=""){
+                        //if(User_Name.isEmpty() && User_Name.length()> 3 && !User_Last_Name.isEmpty() && User_Last_Name.length() > 3 && !User_Password.isEmpty() && User_Password.length() > 3) {
+                            //if(User_Age !="" && User_Email !="" && User_NickName !="" && User_NickName.length() > 3 && User_Cellphone !="" && User_Cellphone.length() == 10 && User_Email !=""){
 
                                 SP_Sing_Up Sing_Up_SP = new SP_Sing_Up(App_Context);
-                                Cheked_Storage_Procedures = Sing_Up_SP.Add_New_User(List_New_User);
+                                Cheked_Storage_Procedures = Sing_Up_SP.Sing_Up_Procedure(List_New_User);
 
                                 if (Cheked_Storage_Procedures){
                                     Toast.makeText(getApplicationContext(), "Registro realizado con exito", Toast.LENGTH_SHORT).show();
@@ -106,10 +101,10 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                                 }
 
 
-                            }
-                        }else{
-                            Toast.makeText(getApplicationContext(), "Por favor verificar todos los campos", Toast.LENGTH_SHORT).show();
-                        }
+                            //}
+                        //}else{
+                           // Toast.makeText(getApplicationContext(), "Por favor verificar todos los campos", Toast.LENGTH_SHORT).show();
+                       // }
 
                     }catch (Exception exception){
                         Toast.makeText(getApplicationContext(), "No se ha logrado establecer la conexión, intentelo de nuevo más tarde", Toast.LENGTH_SHORT).show();
