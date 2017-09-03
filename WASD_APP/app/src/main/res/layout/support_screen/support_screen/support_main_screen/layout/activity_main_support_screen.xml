@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.carlosandres.wasd_app.Support_Classes.Main_Support_Screen.main_support_screen">
+    tools:context="com.example.carlosandres.wasd_app.Support_Classes.Main_Support_Screen.Main_Support_Screen">
 
     <TextView
         android:id="@+id/textView16"

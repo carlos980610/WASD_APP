@@ -27,7 +27,7 @@
             android:label="@string/title_activity_my_personal_profile_screen"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.Your_Personal_Profile_Screen" />
-        <activity android:name=".Support_Classes.Main_Support_Screen.main_support_screen"></activity>
+        <activity android:name=".Support_Classes.Main_Support_Screen.Main_Support_Screen"></activity>
     </application>
 
 </manifest>

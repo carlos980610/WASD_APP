@@ -18,16 +18,16 @@ public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapte
     public static class PublicationViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView PublicationImg;
-        public TextView PublicaciontText;
-        public TextView NumComent;
+        public TextView PublicationText;
+        public TextView NumComment;
         public TextView NumPro;
 
         public PublicationViewHolder(View v) {
             super(v);
 
             PublicationImg = (ImageView) v.findViewById(R.id.imgPublication);
-            PublicaciontText = (TextView) v.findViewById(R.id.txtPublishDescription);
-            NumComent = (TextView) v.findViewById(R.id.txtNumComments);
+            PublicationText = (TextView) v.findViewById(R.id.txtPublishDescription);
+            NumComment = (TextView) v.findViewById(R.id.txtNumComments);
             NumPro = (TextView) v.findViewById(R.id.txtNumberPro);
         }
     }
@@ -51,8 +51,8 @@ public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapte
         public void onBindViewHolder(PublicationViewHolder viewHolder, int i){
 
             viewHolder.PublicationImg.setImageResource(items.get(i).getPublicationImg());
-            viewHolder.PublicaciontText.setText(items.get(i).getPublicationText());
-            viewHolder.NumComent.setText(String.valueOf(items.get(i).getNumComent() + " Comentarios."));
+            viewHolder.PublicationText.setText(items.get(i).getPublicationText());
+            viewHolder.NumComment.setText(String.valueOf(items.get(i).getNumComent() + " Comentarios"));
             viewHolder.NumPro.setText(String.valueOf(items.get(i).getNumPro()));
 
         }
