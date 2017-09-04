@@ -10,10 +10,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.carlosandres.wasd_app.Classes_Login_Screen.Main_Login_Screen.Login_Main_Screen;
 import com.example.carlosandres.wasd_app.Classes_Main_Screen.Main_Main_Screen;
-import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
+import com.example.carlosandres.wasd_app.Classes_Main_Screen.Main_Main_Screen;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Sing_In;
+import com.example.carlosandres.wasd_app.R;
 
 public class Login_Sing_In_Screen extends AppCompatActivity {
 

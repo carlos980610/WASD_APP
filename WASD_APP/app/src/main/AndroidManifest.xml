@@ -20,10 +20,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Classes_Main_Screen.Main_Main_Screen"
+            android:name=".Classes_Main_Screen.Main_Main_Screen_Test"
             android:label="@string/title_activity_main__main__screen" />
         <activity android:name=".Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.Your_Personal_Profile_Screen" />
         <activity android:name=".Support_Classes.Main_Support_Screen.Main_Support_Screen" />
+        <activity
+            android:name=".Classes_Main_Screen.Main_Main_Screen"
+            android:label="@string/title_activity_main__main__screen"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen"></activity>
     </application>
 
 </manifest>
