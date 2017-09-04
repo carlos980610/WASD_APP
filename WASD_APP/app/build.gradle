@@ -21,13 +21,15 @@ android {
         main {
             res.srcDirs =
                     [
+                            //main directories
+                            'src/main/res/layout/main_screen',
+
 
                             //profiles directories
                             'src/main/res/layout/profile_screen/personal_profile_screen/my_personal_profile_screen',
                             'src/main/res/layout/profile_screen/personal_profile_screen/your_personal_profile_screen',
 
-                            //main directories
-                            'src/main/res/layout/main_screen',
+
 
                             //support directories
                             'src/main/res/layout/support_screen/support_screen/support_main_screen',
