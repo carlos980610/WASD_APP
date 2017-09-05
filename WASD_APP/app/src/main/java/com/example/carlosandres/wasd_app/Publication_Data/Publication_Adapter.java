@@ -15,6 +15,8 @@ public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapte
 
     private List<Publication> items;
 
+
+
     public static class PublicationViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView PublicationImg;
@@ -35,19 +37,19 @@ public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapte
             this.items = items;
         }
 
-        @Override
+        @Override //Ok
         public int getItemCount(){
             return items.size();
         }
 
-        @Override
+        @Override //Ok
         public PublicationViewHolder onCreateViewHolder(ViewGroup viewGroup, int i){
 
             View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.publication_card, viewGroup, false);
             return new PublicationViewHolder(v);
         }
 
-        @Override
+        @Override //Ok
         public void onBindViewHolder(PublicationViewHolder viewHolder, int i){
 
             viewHolder.PublicationImg.setImageResource(items.get(i).getPublicationImg());

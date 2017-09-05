@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.carlosandres.wasd_app.R;
 
-public class Main_Support_Screen extends AppCompatActivity {
+class Main_Support_Screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

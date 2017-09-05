@@ -3,6 +3,7 @@ package com.example.carlosandres.wasd_app.Classes_Main_Screen;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -18,10 +19,13 @@ import android.view.MenuItem;
 
 import com.example.carlosandres.wasd_app.Publication_Data.Publication;
 import com.example.carlosandres.wasd_app.Publication_Data.Publication_Adapter;
+import com.example.carlosandres.wasd_app.Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.R.id.tabs;
 
 public class Main_Main_Screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,7 +38,9 @@ public class Main_Main_Screen extends AppCompatActivity
     private Toolbar toolbar;
 
 
-    private static ViewPager viewPager;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private String[] pageTitle = {"Publications", "Others"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +49,17 @@ public class Main_Main_Screen extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        viewPager = (ViewPager)findViewById(R.id.view_pager);
 
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        for (int i = 0; i < 2; i++) {
+            tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
+        }
 
+        //set gravity for tab bar
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+/*
         List<Publication> items = new ArrayList<>();
 
         items.add(new Publication(R.drawable.f, "Esto es un texto de publicacion", "45", "87"));
@@ -59,9 +73,31 @@ public class Main_Main_Screen extends AppCompatActivity
 
         adapter = new Publication_Adapter(items);
         recycler.setAdapter(adapter);
+*/
 
 
+//set viewpager adapter
+        View_Pager_Adapter pagerAdapter = new View_Pager_Adapter(getSupportFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
 
+        //change Tab selection when swipe ViewPager
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        //change ViewPager page when tab selected
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tabs) {
+                viewPager.setCurrentItem(tabs.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tabs) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tabs) {
+            }
+        });
 
 
 
@@ -141,4 +177,9 @@ public class Main_Main_Screen extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
+
+
+
