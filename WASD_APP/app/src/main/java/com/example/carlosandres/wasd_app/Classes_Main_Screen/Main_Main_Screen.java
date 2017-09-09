@@ -49,15 +49,7 @@ public class Main_Main_Screen extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        viewPager = (ViewPager)findViewById(R.id.view_pager);
 
-        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        for (int i = 0; i < 2; i++) {
-            tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
-        }
-
-        //set gravity for tab bar
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 /*
         List<Publication> items = new ArrayList<>();
@@ -77,27 +69,7 @@ public class Main_Main_Screen extends AppCompatActivity
 
 
 //set viewpager adapter
-        View_Pager_Adapter pagerAdapter = new View_Pager_Adapter(getSupportFragmentManager());
-        viewPager.setAdapter(pagerAdapter);
 
-        //change Tab selection when swipe ViewPager
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-        //change ViewPager page when tab selected
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tabs) {
-                viewPager.setCurrentItem(tabs.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tabs) {
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tabs) {
-            }
-        });
 
 
 
@@ -119,6 +91,42 @@ public class Main_Main_Screen extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+        viewPager = (ViewPager)findViewById(R.id.view_pager);
+
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        for (int i = 0; i < 2; i++) {
+            tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
+        }
+
+        //set gravity for tab bar
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+
+        View_Pager_Adapter pagerAdapter = new View_Pager_Adapter(getSupportFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
+
+        //change Tab selection when swipe ViewPager
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        //change ViewPager page when tab selected
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tabs) {
+                viewPager.setCurrentItem(tabs.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tabs) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tabs) {
+            }
+        });
     }
 
     @Override
