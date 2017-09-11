@@ -21,15 +21,15 @@ android {
         main {
             res.srcDirs =
                     [
+                            //upload publication screen
+                            'src/main/res/layout/upload_publication_screen',
+
                             //main directories
                             'src/main/res/layout/main_screen',
-
 
                             //profiles directories
                             'src/main/res/layout/profile_screen/personal_profile_screen/my_personal_profile_screen',
                             'src/main/res/layout/profile_screen/personal_profile_screen/your_personal_profile_screen',
-
-
 
                             //support directories
                             'src/main/res/layout/support_screen/support_screen/support_main_screen',
@@ -63,7 +63,7 @@ dependencies {
     compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile 'com.google.android.gms:play-services-maps:11.0.4'
+    testCompile 'junit:junit:4.12'
 }

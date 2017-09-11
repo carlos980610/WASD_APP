@@ -25,7 +25,8 @@
             android:name=".Classes_Main_Screen.Main_Main_Screen"
             android:label="@string/title_activity_main__main__screen"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen"></activity>
+        <activity android:name=".Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen" />
+        <activity android:name=".Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen"></activity>
     </application>
 
 </manifest>
