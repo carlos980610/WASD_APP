@@ -1,4 +1,4 @@
-package com.example.carlosandres.wasd_app.Publication_Data;
+package com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,7 +18,7 @@ import java.util.List;
  * Created by hp on 4/09/2017.
  */
 
-public class First_Fragment extends Fragment {
+public class First_Fragment_Main_Screen extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,15 +29,15 @@ public class First_Fragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final List<Publication> items = new ArrayList<Publication>();
+        final List<Publication_Main_Screen> items = new ArrayList<Publication_Main_Screen>();
 
-        items.add(new Publication(R.drawable.f, "Esto es un texto de publicacion", "45", "87"));
-        items.add(new Publication(R.drawable.l, "Esto es OTRO text de prueba para una publicacion", "80", "357"));
+        items.add(new Publication_Main_Screen(R.drawable.f, "Esto es un texto de publicacion", "45", "87"));
+        items.add(new Publication_Main_Screen(R.drawable.l, "Esto es OTRO text de prueba para una publicacion", "80", "357"));
 
 
-        final Publication_Adapter itemsAdapter = new Publication_Adapter(items);
+        final Publication_Adapter_Main_Screen itemsAdapter = new Publication_Adapter_Main_Screen(items);
         final RecyclerView clv = (RecyclerView) view.findViewById(R.id.recycler);
-        clv.setLayoutManager(new LinearLayoutManager(First_Fragment.this.getActivity()));
+        clv.setLayoutManager(new LinearLayoutManager(First_Fragment_Main_Screen.this.getActivity()));
         clv.setHasFixedSize(true);
         clv.setAdapter(itemsAdapter);
 

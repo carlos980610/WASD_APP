@@ -1,4 +1,4 @@
-package com.example.carlosandres.wasd_app.Publication_Data;
+package com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,8 +16,8 @@ public class View_Pager_Adapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position ==0) {
-            return new First_Fragment();
+        if (position == 0) {
+            return new First_Fragment_Main_Screen();
         }
 
         /*else if (position == 1) {
@@ -25,7 +25,7 @@ public class View_Pager_Adapter extends FragmentPagerAdapter {
         }*/
 
         else
-            return new First_Fragment();
+            return new First_Fragment_Main_Screen();
 
     }
 

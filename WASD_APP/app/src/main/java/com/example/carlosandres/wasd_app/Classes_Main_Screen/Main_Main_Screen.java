@@ -17,20 +17,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen;
 import com.example.carlosandres.wasd_app.Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen;
-import com.example.carlosandres.wasd_app.Publication_Data.View_Pager_Adapter;
+import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
 
 public class Main_Main_Screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
 
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager IManager;
 
     private Toolbar toolbar;
-
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -43,13 +42,11 @@ public class Main_Main_Screen extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
 /*
-        List<Publication> items = new ArrayList<>();
+        List<Publication_Main_Screen> items = new ArrayList<>();
 
-        items.add(new Publication(R.drawable.f, "Esto es un texto de publicacion", "45", "87"));
-        items.add(new Publication(R.drawable.l, "Esto es OTRO text de prueba para una publicacion", "80", "357"));
+        items.add(new Publication_Main_Screen(R.drawable.f, "Esto es un texto de publicacion", "45", "87"));
+        items.add(new Publication_Main_Screen(R.drawable.l, "Esto es OTRO text de prueba para una publicacion", "80", "357"));
 
         recycler = (RecyclerView) findViewById(R.id.recycler);
         recycler.setHasFixedSize(true);
@@ -57,7 +54,7 @@ public class Main_Main_Screen extends AppCompatActivity
         IManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(IManager);
 
-        adapter = new Publication_Adapter(items);
+        adapter = new Publication_Adapter_Main_Screen(items);
         recycler.setAdapter(adapter);
 */
 
@@ -72,9 +69,9 @@ public class Main_Main_Screen extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                        Intent intent = new Intent (getApplicationContext(), Upload_Publication_Main_Screen.class);
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                        Intent intent = new Intent (getApplicationContext(), My_Personal_Profile_Screen.class);
                         startActivity(intent);
             }
         });
@@ -94,7 +91,7 @@ public class Main_Main_Screen extends AppCompatActivity
         viewPager = (ViewPager)findViewById(R.id.view_pager);
 
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < pageTitle.length; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
         }
 
@@ -181,8 +178,6 @@ public class Main_Main_Screen extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }
 
 

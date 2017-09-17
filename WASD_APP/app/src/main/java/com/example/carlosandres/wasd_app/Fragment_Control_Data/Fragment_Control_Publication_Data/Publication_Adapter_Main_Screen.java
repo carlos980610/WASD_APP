@@ -1,4 +1,4 @@
-package com.example.carlosandres.wasd_app.Publication_Data;
+package com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import com.example.carlosandres.wasd_app.R;
 
 import java.util.List;
 
-public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapter.PublicationViewHolder>  {
+public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Publication_Adapter_Main_Screen.PublicationViewHolder>  {
 
-    private List<Publication> items;
+    private List<Publication_Main_Screen> items;
 
 
 
@@ -33,7 +33,7 @@ public class Publication_Adapter extends RecyclerView.Adapter<Publication_Adapte
             NumPro = (TextView) v.findViewById(R.id.txtNumberPro);
         }
     }
-        public Publication_Adapter(List<Publication> items) {
+        public Publication_Adapter_Main_Screen(List<Publication_Main_Screen> items) {
             this.items = items;
         }
 

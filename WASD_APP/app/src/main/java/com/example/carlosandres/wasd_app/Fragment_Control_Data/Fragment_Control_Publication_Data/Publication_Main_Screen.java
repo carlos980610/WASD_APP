@@ -1,15 +1,13 @@
-package com.example.carlosandres.wasd_app.Publication_Data;
+package com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data;
 
-import com.example.carlosandres.wasd_app.Classes_Main_Screen.*;
-
-public class Publication {
+public class Publication_Main_Screen {
 
     private int PublicationImg;
     private String PublicationText;
     private String NumComent;
     private String NumPro;
 
-    public Publication(int PublicationImg, String PublicationText, String NumComent, String NumPro){
+    public Publication_Main_Screen(int PublicationImg, String PublicationText, String NumComent, String NumPro){
 
         this.PublicationImg = PublicationImg;
         this.PublicationText = PublicationText;
