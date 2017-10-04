@@ -27,7 +27,7 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
         public PublicationViewHolder(View v) {
             super(v);
 
-            PublicationImg = (ImageView) v.findViewById(R.id.imgPublication);
+            PublicationImg = (ImageView) v.findViewById(R.id.txtPublishDescription);
             PublicationText = (TextView) v.findViewById(R.id.txtPublishDescription);
             NumComment = (TextView) v.findViewById(R.id.txtNumComments);
             NumPro = (TextView) v.findViewById(R.id.txtNumberPro);
