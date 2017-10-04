@@ -20,7 +20,15 @@
             android:layout_weight="0.9">
 
             <TextView
-                android:id="@+id/txtNumComments"
+                android:id="@+id/txtPublicDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentario de la publicacion"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="277dp" />
+
+            <TextView
+                android:id="@+id/txtNumComents"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="150 Comentrarios"
@@ -35,16 +43,8 @@
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="441dp" />
 
-            <TextView
-                android:id="@+id/txtPublishDescription"
-                android:layout_width="199dp"
-                android:layout_height="17dp"
-                android:text="Aqui va la descripcion de la foto"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="327dp" />
-
             <ImageView
-                android:id="@+id/txtPublishDescription"
+                android:id="@+id/imgPublcationS"
                 android:layout_width="384dp"
                 android:layout_height="287dp"
                 android:layout_marginBottom="8dp"
@@ -72,17 +72,14 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="374dp"
                 android:layout_height="71dp"
-                android:layout_marginBottom="32dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/txtPublishDescription"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:layout_constraintHorizontal_bias="1.0">
 
 
@@ -98,7 +95,7 @@
                     android:layout_toRightOf="@+id/imgbtnUser"
                     android:text="RAGHYT"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    app:layout_constraintBottom_toTopOf="@+id/txtPublishDescription"
+                    app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
                     app:layout_constraintHorizontal_bias="0.894"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -118,7 +115,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/txtPublishDescription"
+                    app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
                     app:layout_constraintHorizontal_bias="0.254"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -173,13 +170,10 @@
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.333"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPublishDescription"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintRight_toRightOf="parent">
 
 
                 <ImageButton
