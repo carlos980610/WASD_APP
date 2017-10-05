@@ -33,7 +33,7 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
     boolean Cheked_Storage_Procedures = false;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_sing_up_screen);
 
