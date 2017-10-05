@@ -10,55 +10,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:cardElevation="6dp"
+        android:layout_weight="0.64"
         app:cardCornerRadius="6dp"
-        android:layout_weight="0.64">
+        app:cardElevation="6dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="407dp"
             android:layout_weight="0.9">
 
             <TextView
                 android:id="@+id/txtPublicDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="245dp"
                 android:text="Comentario de la publicacion"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="277dp" />
-
-            <TextView
-                android:id="@+id/txtNumComents"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="150 Comentrarios"
-                tools:layout_editor_absoluteX="244dp"
-                tools:layout_editor_absoluteY="441dp" />
-
-            <TextView
-                android:id="@+id/txtNumberPro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="55 PRO"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="441dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.018" />
 
             <ImageView
                 android:id="@+id/imgPublcationS"
-                android:layout_width="384dp"
-                android:layout_height="287dp"
+                android:layout_width="372dp"
+                android:layout_height="151dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginStart="2dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="8dp"
                 android:adjustViewBounds="false"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
                 app:layout_constraintVertical_bias="0.0"
                 tools:layout_constraintBottom_creator="1"
                 tools:layout_constraintLeft_creator="1"
@@ -66,21 +58,22 @@
                 tools:layout_constraintTop_creator="1" />
 
 
-
-
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="374dp"
                 android:layout_height="71dp"
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="1.0">
+                app:layout_constraintVertical_bias="0.0">
 
 
                 <TextView
@@ -93,6 +86,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_toEndOf="@+id/imgbtnUser"
                     android:layout_toRightOf="@+id/imgbtnUser"
+                    android:background="@null"
                     android:text="RAGHYT"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
@@ -100,8 +94,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.216"
-                    android:background="@null"/>
+                    app:layout_constraintVertical_bias="0.216" />
 
                 <ImageButton
                     android:id="@+id/imgbtnUser"
@@ -134,14 +127,14 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:background="@null"
                     android:text="Medellín, Colombia"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.569"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.789"
-                    android:background="@null"/>
+                    app:layout_constraintVertical_bias="0.789" />
 
                 <ImageButton
                     android:id="@+id/imageButton"
@@ -167,25 +160,38 @@
                 android:id="@+id/relativeLayout"
                 android:layout_width="371dp"
                 android:layout_height="118dp"
-                android:layout_marginBottom="9dp"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.333"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintVertical_bias="1.0">
 
+
+                <TextView
+                    android:id="@+id/txtNumberPro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/BtnPro"
+                    android:layout_marginTop="12dp"
+                    android:text="55 PRO"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="441dp" />
 
                 <ImageButton
                     android:id="@+id/BtnComment"
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
                     android:layout_alignTop="@+id/BtnPro"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginStart="9dp"
-                    android:layout_toEndOf="@+id/BtnPro"
-                    android:layout_toRightOf="@+id/BtnPro"
                     android:background="@color/colorPrimaryDark"
                     app:srcCompat="@drawable/insert_comment_publication_card_screen" />
 
@@ -195,12 +201,8 @@
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toEndOf="@+id/BtnComment"
-                    android:layout_toRightOf="@+id/BtnComment"
+                    android:layout_alignTop="@+id/BtnComment"
+                    android:layout_centerHorizontal="true"
                     android:background="@android:color/holo_red_dark"
                     app:srcCompat="@drawable/share_publish_publication_card_screen" />
 
@@ -211,11 +213,21 @@
                     android:layout_height="35dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/BtnShare"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
                     android:background="@android:color/holo_orange_light"
                     app:srcCompat="@drawable/star_like_publish_publication_card_screen" />
+
+                <TextView
+                    android:id="@+id/txtNumComents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtNumberPro"
+                    android:layout_alignBottom="@+id/txtNumberPro"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Comentarios" />
 
 
             </RelativeLayout>
