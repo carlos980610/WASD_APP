@@ -71,7 +71,7 @@ public class Main_Main_Screen extends AppCompatActivity
             public void onClick(View view) {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
-                        Intent intent = new Intent (getApplicationContext(), My_Personal_Profile_Screen.class);
+                        Intent intent = new Intent (getApplicationContext(), Upload_Publication_Main_Screen.class);
                         startActivity(intent);
             }
         });
