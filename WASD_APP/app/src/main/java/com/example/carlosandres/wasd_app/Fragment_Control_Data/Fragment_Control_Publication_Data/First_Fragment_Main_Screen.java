@@ -31,8 +31,8 @@ public class First_Fragment_Main_Screen extends Fragment {
 
         final List<Publication_Main_Screen> items = new ArrayList<Publication_Main_Screen>();
 
-        items.add(new Publication_Main_Screen(R.drawable.f, "Esto es un texto de publicacion", "45", "87"));
-        items.add(new Publication_Main_Screen(R.drawable.l, "Esto es OTRO text de prueba para una publicacion", "80", "357"));
+        items.add(new Publication_Main_Screen(R.drawable.f, "Esto es un texto de publicacion", "45", "87", "Iva025", "Envigado", R.drawable.l));
+        items.add(new Publication_Main_Screen(R.drawable.l, "Esto es OTRO text de prueba para una publicacion", "80", "357", "CAMC", "IUE", R.drawable.f));
 
 
         final Publication_Adapter_Main_Screen itemsAdapter = new Publication_Adapter_Main_Screen(items);

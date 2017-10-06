@@ -23,6 +23,9 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
         public TextView PublicationText;
         public TextView NumComment;
         public TextView NumPro;
+        public TextView Nick;
+        public TextView Ubication;
+        public ImageView ProfileImg;
 
         public PublicationViewHolder(View v) {
             super(v);
@@ -31,6 +34,9 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
             PublicationText = (TextView) v.findViewById(R.id.txtPublicDescription);
             NumComment = (TextView) v.findViewById(R.id.txtNumComents);
             NumPro = (TextView) v.findViewById(R.id.txtNumberPro);
+            Nick = (TextView) v.findViewById(R.id.txtUser);
+            Ubication = (TextView) v.findViewById(R.id.txtUbication);
+            ProfileImg = (ImageView) v.findViewById(R.id.imgbtnUser);
         }
     }
         public Publication_Adapter_Main_Screen(List<Publication_Main_Screen> items) {
@@ -55,7 +61,10 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
             viewHolder.PublicationImg.setImageResource(items.get(i).getPublicationImg());
             viewHolder.PublicationText.setText(items.get(i).getPublicationText());
             viewHolder.NumComment.setText(String.valueOf(items.get(i).getNumComent() + " Comentarios"));
-            viewHolder.NumPro.setText(String.valueOf(items.get(i).getNumPro()));
+            viewHolder.NumPro.setText(String.valueOf(items.get(i).getNumPro() + " Pro"));
+            viewHolder.Nick.setText(items.get(i).getNick());
+            viewHolder.Ubication.setText(items.get(i).getUbication());
+            viewHolder.ProfileImg.setImageResource(items.get(i).getProfileImg());
 
         }
 
