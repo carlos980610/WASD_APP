@@ -8,11 +8,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.carlosandres.wasd_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.carlosandres.wasd_app.R.id.imgPublcationS;
 
 /**
  * Created by hp on 4/09/2017.
