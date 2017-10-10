@@ -21,7 +21,7 @@
 
             <ImageView
                 android:id="@+id/imgPublcationS"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="2dp"
@@ -40,8 +40,7 @@
                 tools:layout_constraintBottom_creator="1"
                 tools:layout_constraintLeft_creator="1"
                 tools:layout_constraintRight_creator="1"
-                tools:layout_constraintTop_creator="1"
-                tools:layout_editor_absoluteY="-54dp" />
+                tools:layout_constraintTop_creator="1" />
 
             <TextView
                 android:id="@+id/txtPublicDescription"
@@ -57,7 +56,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.018" />
+                app:layout_constraintVertical_bias="0.018"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
 
 
             <android.support.constraint.ConstraintLayout
@@ -153,7 +154,9 @@
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/more_options_publish_publication_card_screen" />
+                    app:srcCompat="@drawable/more_options_publish_publication_card_screen"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -171,7 +174,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-                app:layout_constraintVertical_bias="1.0">
+                app:layout_constraintVertical_bias="1.0"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
 
 
                 <TextView
