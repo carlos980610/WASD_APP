@@ -11,7 +11,7 @@ import com.example.carlosandres.wasd_app.Classes_Login_Screen.Sing_In_Screen.Log
 import com.example.carlosandres.wasd_app.R;
 
 public class Login_Main_Screen extends AppCompatActivity {
-
+/**/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
