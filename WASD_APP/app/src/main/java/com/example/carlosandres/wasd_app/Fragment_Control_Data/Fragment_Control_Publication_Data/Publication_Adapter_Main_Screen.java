@@ -1,11 +1,13 @@
 package com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data;
 
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.carlosandres.wasd_app.R;
@@ -31,6 +33,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
         public ImageView Pro;
         public ImageView Share;
         public ImageView Option;
+        public ConstraintLayout LayoutUser;
+        public RelativeLayout LayoutPublic;
 
         public PublicationViewHolder(View v) {
             super(v);
@@ -46,6 +50,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
             Pro = (ImageView) v.findViewById(R.id.BtnPro);
             Share = (ImageView) v.findViewById(R.id.BtnShare);
             Option = (ImageView) v.findViewById(R.id.imgOptionMenu);
+            LayoutUser = (ConstraintLayout) v.findViewById(R.id.LayoutUser);
+            LayoutPublic = (RelativeLayout) v.findViewById(R.id.LayoutPublic);
             PublicationText.setVisibility(v.INVISIBLE);
             NumComment.setVisibility(v.INVISIBLE);
             NumPro.setVisibility(v.INVISIBLE);
@@ -56,6 +62,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
             Pro.setVisibility(v.INVISIBLE);
             Share.setVisibility(v.INVISIBLE);
             Option.setVisibility(v.INVISIBLE);
+            LayoutUser.setVisibility(v.INVISIBLE);
+            LayoutPublic.setVisibility(v.INVISIBLE);
             PublicationImg.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
@@ -71,6 +79,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                         Pro.setVisibility(v.VISIBLE);
                         Share.setVisibility(v.VISIBLE);
                         Option.setVisibility(v.VISIBLE);
+                        LayoutUser.setVisibility(v.VISIBLE);
+                        LayoutPublic.setVisibility(v.VISIBLE);
                     }else{
                         PublicationText.setVisibility(v.INVISIBLE);
                         NumComment.setVisibility(v.INVISIBLE);
@@ -82,6 +92,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                         Pro.setVisibility(v.INVISIBLE);
                         Share.setVisibility(v.INVISIBLE);
                         Option.setVisibility(v.INVISIBLE);
+                        LayoutUser.setVisibility(v.INVISIBLE);
+                        LayoutPublic.setVisibility(v.INVISIBLE);
                     }
                 }
 

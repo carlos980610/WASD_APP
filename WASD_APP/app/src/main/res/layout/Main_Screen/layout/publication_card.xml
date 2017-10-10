@@ -8,27 +8,26 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginBottom="8dp"
-        android:layout_weight="0.64"
-        app:cardCornerRadius="6dp"
+        app:cardCornerRadius="4dp"
         app:cardElevation="6dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="409dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.9">
 
             <ImageView
                 android:id="@+id/imgPublcationS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="0dp"
                 android:layout_marginEnd="2dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginStart="2dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="0dp"
                 android:adjustViewBounds="false"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -40,38 +39,40 @@
                 tools:layout_constraintBottom_creator="1"
                 tools:layout_constraintLeft_creator="1"
                 tools:layout_constraintRight_creator="1"
-                tools:layout_constraintTop_creator="1"
-                tools:layout_editor_absoluteY="-54dp" />
+                tools:layout_constraintTop_creator="1" />
 
             <TextView
                 android:id="@+id/txtPublicDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="242dp"
+                android:layout_height="36dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="245dp"
+                android:background="#333333"
                 android:text="Comentario de la publicacion"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.018" />
+                app:layout_constraintVertical_bias="0.495" />
 
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="374dp"
-                android:layout_height="71dp"
+                android:id="@+id/LayoutUser"
+                android:layout_width="403dp"
+                android:layout_height="67dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/pback"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.352"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -80,8 +81,8 @@
 
                 <TextView
                     android:id="@+id/txtUser"
-                    android:layout_width="214dp"
-                    android:layout_height="27dp"
+                    android:layout_width="218dp"
+                    android:layout_height="28dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
@@ -92,17 +93,17 @@
                     android:text="RAGHYT"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
-                    app:layout_constraintHorizontal_bias="0.894"
+                    app:layout_constraintHorizontal_bias="0.525"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.216" />
+                    app:layout_constraintVertical_bias="0.053" />
 
 
                 <ImageButton
                     android:id="@+id/imgbtnUser"
-                    android:layout_width="48dp"
-                    android:layout_height="47dp"
+                    android:layout_width="71dp"
+                    android:layout_height="57dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
@@ -110,19 +111,19 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="0dp"
                     app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
-                    app:layout_constraintHorizontal_bias="0.254"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.235"
+                    app:layout_constraintVertical_bias="0.007"
                     app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
                 <TextView
                     android:id="@+id/txtUbication"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="127dp"
+                    android:layout_height="18dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginLeft="8dp"
@@ -132,19 +133,21 @@
                     android:background="@null"
                     android:text="Medellín, Colombia"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.569"
+                    app:layout_constraintHorizontal_bias="0.357"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.789" />
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <ImageButton
                     android:id="@+id/imgOptionMenu"
                     android:layout_width="29dp"
                     android:layout_height="47dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/cardview_shadow_end_color"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -159,19 +162,23 @@
 
 
             <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="371dp"
-                android:layout_height="118dp"
+                android:id="@+id/LayoutPublic"
+                android:layout_width="461dp"
+                android:layout_height="83dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:background="@drawable/pback"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintHorizontal_bias="0.273"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-                app:layout_constraintVertical_bias="1.0">
+                app:layout_constraintTop_toBottomOf="@+id/LayoutUser"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteY="400dp">
 
 
                 <TextView
@@ -181,6 +188,8 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/BtnPro"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginStart="25dp"
                     android:layout_marginTop="12dp"
                     android:text="55 PRO"
                     tools:layout_editor_absoluteX="16dp"
@@ -191,9 +200,11 @@
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignTop="@+id/BtnPro"
+                    android:layout_alignTop="@+id/BtnShare"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@+id/BtnShare"
+                    android:layout_toRightOf="@+id/BtnShare"
                     android:background="@color/colorPrimaryDark"
                     app:srcCompat="@drawable/insert_comment_publication_card_screen" />
 
@@ -203,8 +214,11 @@
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
-                    android:layout_alignTop="@+id/BtnComment"
-                    android:layout_centerHorizontal="true"
+                    android:layout_alignTop="@+id/BtnPro"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_toEndOf="@+id/BtnPro"
+                    android:layout_toRightOf="@+id/BtnPro"
                     android:background="@android:color/holo_red_dark"
                     app:srcCompat="@drawable/share_publish_publication_card_screen" />
 
@@ -213,9 +227,10 @@
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/txtNumberPro"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/txtNumberPro"
+                    android:layout_marginTop="12dp"
                     android:background="@android:color/holo_orange_light"
                     app:srcCompat="@drawable/star_like_publish_publication_card_screen" />
 
@@ -225,10 +240,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/txtNumberPro"
                     android:layout_alignBottom="@+id/txtNumberPro"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_alignEnd="@+id/BtnComment"
+                    android:layout_alignRight="@+id/BtnComment"
                     android:text="Comentarios" />
 
 
