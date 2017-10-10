@@ -25,7 +25,7 @@ public class View_Pager_Adapter extends FragmentPagerAdapter {
         }*/
 
         else
-            return new First_Fragment_Main_Screen();
+            return new Second_Fragment_Main();
 
     }
 
