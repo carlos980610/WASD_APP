@@ -72,8 +72,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
 
                     if(PublicationText.getVisibility() == View.INVISIBLE) {
 
-                        final int Duration = 1000;
-                        final  int Time_After = 500;
+                        final int Duration = 400;
+                        final  int Time_After = 120;
 
                         AlphaAnimation Animation = new AlphaAnimation(0.0f,1.0f);
                         Animation.setDuration(Duration);
@@ -110,8 +110,10 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                         Nick.setAnimation(Animation);
                         NumPro.setAnimation(Animation);
                         NumComment.setAnimation(Animation);
-                        PublicationImg.setAnimation(Animation);
+
                         PublicationText.setAnimation(Animation);
+
+
                         PublicationText.setVisibility(v.VISIBLE);
                         NumComment.setVisibility(v.VISIBLE);
                         NumPro.setVisibility(v.VISIBLE);
@@ -124,19 +126,72 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                         Option.setVisibility(v.VISIBLE);
                         LayoutUser.setVisibility(v.VISIBLE);
                         LayoutPublic.setVisibility(v.VISIBLE);
+
+
+
+
+                        if(PublicationText.getVisibility()== View.VISIBLE){
+
+                            Animation.setDuration(Duration);
+                            Animation.setStartOffset(Time_After);
+                            Animation.setFillAfter(true);
+
+
+
+                            Animation.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+                            LayoutPublic.setAnimation(Animation);
+                            LayoutUser.setAnimation(Animation);
+                            Option.setAnimation(Animation);
+                            Share.setAnimation(Animation);
+                            Pro.setAnimation(Animation);
+                            Comment.setAnimation(Animation);
+                            ProfileImg.setAnimation(Animation);
+                            Ubication.setAnimation(Animation);
+                            Nick.setAnimation(Animation);
+                            NumPro.setAnimation(Animation);
+                            NumComment.setAnimation(Animation);
+
+                            PublicationText.setAnimation(Animation);
+
+
+
+
+
+
+                            PublicationText.setVisibility(v.INVISIBLE);
+                            NumComment.setVisibility(v.INVISIBLE);
+                            NumPro.setVisibility(v.INVISIBLE);
+                            Nick.setVisibility(v.INVISIBLE);
+                            Ubication.setVisibility(v.INVISIBLE);
+                            ProfileImg.setVisibility(v.INVISIBLE);
+                            Comment.setVisibility(v.INVISIBLE);
+                            Pro.setVisibility(v.INVISIBLE);
+                            Share.setVisibility(v.INVISIBLE);
+                            Option.setVisibility(v.INVISIBLE);
+                            LayoutUser.setVisibility(v.INVISIBLE);
+                            LayoutPublic.setVisibility(v.INVISIBLE);
+                        }
+
+
                     }else{
-                        PublicationText.setVisibility(v.INVISIBLE);
-                        NumComment.setVisibility(v.INVISIBLE);
-                        NumPro.setVisibility(v.INVISIBLE);
-                        Nick.setVisibility(v.INVISIBLE);
-                        Ubication.setVisibility(v.INVISIBLE);
-                        ProfileImg.setVisibility(v.INVISIBLE);
-                        Comment.setVisibility(v.INVISIBLE);
-                        Pro.setVisibility(v.INVISIBLE);
-                        Share.setVisibility(v.INVISIBLE);
-                        Option.setVisibility(v.INVISIBLE);
-                        LayoutUser.setVisibility(v.INVISIBLE);
-                        LayoutPublic.setVisibility(v.INVISIBLE);
+
+
                     }
                 }
 
