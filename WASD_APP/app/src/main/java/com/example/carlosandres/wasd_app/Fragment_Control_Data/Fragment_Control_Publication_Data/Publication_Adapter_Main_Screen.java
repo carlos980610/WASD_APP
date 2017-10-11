@@ -68,65 +68,62 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
             LayoutPublic.setVisibility(v.INVISIBLE);
 
 
-
-            PublicationImg.setOnClickListener(new View.OnClickListener(){
+            PublicationImg.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v){
+                public void onClick(View v) {
 
-                    final int Duration = 400;
-                    final  int Time_After = 120;
+                    final int Duration = 350;
+                    final  int Time_After = 100;
 
                     AlphaAnimation Animation = new AlphaAnimation(0.0f,1.0f);
                     Animation.setDuration(Duration);
                     Animation.setStartOffset(Time_After);
-                    Animation.setFillAfter(true);
-
-
-                    if(click==0) {
 
 
 
-                        Animation.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-
-                            }
-                        });
-
-
-                        LayoutPublic.setAnimation(Animation);
-                        LayoutUser.setAnimation(Animation);
-                        Option.setAnimation(Animation);
-                        Share.setAnimation(Animation);
-                        Pro.setAnimation(Animation);
-                        Comment.setAnimation(Animation);
-                        ProfileImg.setAnimation(Animation);
-                        Ubication.setAnimation(Animation);
-                        Nick.setAnimation(Animation);
-                        NumPro.setAnimation(Animation);
-                        NumComment.setAnimation(Animation);
-
-                        PublicationText.setAnimation(Animation);
+                        if(click==0){
 
 
 
 
 
 
+                            PublicationText.setVisibility(v.INVISIBLE);
+                            NumComment.setVisibility(v.INVISIBLE);
+                            NumPro.setVisibility(v.INVISIBLE);
+                            Nick.setVisibility(v.INVISIBLE);
+                            Ubication.setVisibility(v.INVISIBLE);
+                            ProfileImg.setVisibility(v.INVISIBLE);
+                            Comment.setVisibility(v.INVISIBLE);
+                            Pro.setVisibility(v.INVISIBLE);
+                            Share.setVisibility(v.INVISIBLE);
+                            Option.setVisibility(v.INVISIBLE);
+                            LayoutUser.setVisibility(v.INVISIBLE);
+                            LayoutPublic.setVisibility(v.INVISIBLE);
+                            click = 1;
+
+                        }else if (click==1){
 
 
 
-                            click=1;
+
+
+                            LayoutPublic.setAnimation(Animation);
+                            LayoutUser.setAnimation(Animation);
+                            Option.setAnimation(Animation);
+                            Share.setAnimation(Animation);
+                            Pro.setAnimation(Animation);
+                            Comment.setAnimation(Animation);
+                            ProfileImg.setAnimation(Animation);
+                            Ubication.setAnimation(Animation);
+                            Nick.setAnimation(Animation);
+                            NumPro.setAnimation(Animation);
+                            NumComment.setAnimation(Animation);
+
+                            PublicationText.setAnimation(Animation);
+
+
+
                             PublicationText.setVisibility(v.VISIBLE);
                             NumComment.setVisibility(v.VISIBLE);
                             NumPro.setVisibility(v.VISIBLE);
@@ -141,29 +138,14 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                             LayoutPublic.setVisibility(v.VISIBLE);
 
 
-
-
-                        }else  if(click==1) {
-
-                            click=0;
-                            PublicationText.setVisibility(v.INVISIBLE);
-                            NumComment.setVisibility(v.INVISIBLE);
-                            NumPro.setVisibility(v.INVISIBLE);
-                            Nick.setVisibility(v.INVISIBLE);
-                            Ubication.setVisibility(v.VISIBLE);
-                            ProfileImg.setVisibility(v.INVISIBLE);
-                            Comment.setVisibility(v.INVISIBLE);
-                            Pro.setVisibility(v.INVISIBLE);
-                            Share.setVisibility(v.INVISIBLE);
-                            Option.setVisibility(v.INVISIBLE);
-                            LayoutUser.setVisibility(v.INVISIBLE);
-                            LayoutPublic.setVisibility(v.INVISIBLE);
+                            click = 0;
 
                         }
 
-                }
 
+                }
             });
+
 
         }
     }
