@@ -34,7 +34,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_publication_main_screen);
-
+   
 
 
 
