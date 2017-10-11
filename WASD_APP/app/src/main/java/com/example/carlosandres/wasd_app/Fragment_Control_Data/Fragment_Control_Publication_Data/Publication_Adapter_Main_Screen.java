@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -69,6 +71,47 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                 public void onClick(View v){
 
                     if(PublicationText.getVisibility() == View.INVISIBLE) {
+
+                        final int Duration = 1000;
+                        final  int Time_After = 500;
+
+                        AlphaAnimation Animation = new AlphaAnimation(0.0f,1.0f);
+                        Animation.setDuration(Duration);
+                        Animation.setStartOffset(Time_After);
+                        Animation.setFillAfter(true);
+
+
+
+                        Animation.setAnimationListener(new Animation.AnimationListener() {
+                            @Override
+                            public void onAnimationStart(Animation animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animation animation) {
+
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animation animation) {
+
+                            }
+                        });
+
+                        LayoutPublic.setAnimation(Animation);
+                        LayoutUser.setAnimation(Animation);
+                        Option.setAnimation(Animation);
+                        Share.setAnimation(Animation);
+                        Pro.setAnimation(Animation);
+                        Comment.setAnimation(Animation);
+                        ProfileImg.setAnimation(Animation);
+                        Ubication.setAnimation(Animation);
+                        Nick.setAnimation(Animation);
+                        NumPro.setAnimation(Animation);
+                        NumComment.setAnimation(Animation);
+                        PublicationImg.setAnimation(Animation);
+                        PublicationText.setAnimation(Animation);
                         PublicationText.setVisibility(v.VISIBLE);
                         NumComment.setVisibility(v.VISIBLE);
                         NumPro.setVisibility(v.VISIBLE);
