@@ -38,7 +38,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
 
 
 
-/*
+
         final CharSequence [] options = {"Gallery", "Cancel"};
         //imageView = (ImageView)findViewById(R.id.picture);
         Button button_photo = (Button)findViewById(R.id.btnSelect_From_Gallery);
@@ -62,7 +62,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                 });
                 builder.show();
             }
-        });*/
+        });
 
     }
 }

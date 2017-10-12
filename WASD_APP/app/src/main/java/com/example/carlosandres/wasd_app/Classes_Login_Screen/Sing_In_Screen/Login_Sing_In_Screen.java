@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.carlosandres.wasd_app.Classes_Main_Screen.Main_Main_Screen;
 import com.example.carlosandres.wasd_app.Classes_Main_Screen.Main_Main_Screen;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Sing_In;
+import com.example.carlosandres.wasd_app.Default_Process.Create_Default_Users;
 import com.example.carlosandres.wasd_app.R;
 
 public class Login_Sing_In_Screen extends AppCompatActivity {
@@ -64,6 +65,14 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Inicio de sesión realizada con exito", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), Main_Main_Screen.class);
                         startActivity(intent);
+
+
+                        Create_Default_Users cdu = new Create_Default_Users();
+                        cdu.Create_Users("Juan","Perez","jp","23","j@g.c","1","3"); //User 1
+                        cdu.Create_Users("Maria","Ochoa","mo","23","m@g.c","1","3"); //User 2
+                        cdu.Create_Users("Pedro","Builes","pb","23","p@g.c","1","3"); //User 3
+
+
                     }else{
 
                     }
