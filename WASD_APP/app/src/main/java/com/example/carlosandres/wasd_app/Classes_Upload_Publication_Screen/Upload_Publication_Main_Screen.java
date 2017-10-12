@@ -39,7 +39,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
             public void onClick(View v){
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Upload_Publication_Main_Screen.this);
-                builder.setTitle("Choose an option");
+                builder.setTitle("Choose    an option");
                 builder.setItems(options  , new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int selectOP){
