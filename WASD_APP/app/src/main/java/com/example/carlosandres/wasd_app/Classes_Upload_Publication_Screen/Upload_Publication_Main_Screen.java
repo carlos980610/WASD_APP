@@ -124,7 +124,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
         return false;
     }
 
-
+      
 
     private void openCamera() {
         mayRequestStoragePermission();
