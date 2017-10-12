@@ -40,7 +40,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
 
 
         final CharSequence [] options = {"Gallery", "Cancel"};
-        //imageView = (ImageView)findViewById(R.id.picture);
+        imageView = (ImageView)findViewById(R.id.imageView4);
         Button button_photo = (Button)findViewById(R.id.btnSelect_From_Gallery);
         button_photo.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -48,14 +48,14 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Upload_Publication_Main_Screen.this);
                 builder.setTitle("Choose an option");
-                builder.setItems(options, new DialogInterface.OnClickListener(){
+                builder.setItems(options  , new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int selectOP){
                         if(options[selectOP]=="Gallery"){
                             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                             intent.setType("image/*");
                             startActivityForResult(intent.createChooser(intent, "Cancel"), SELECT_PICTURE);
-                            imageView
+
                         }else if(options[selectOP]=="Cancel"){
                             dialog.dismiss();
                         }
