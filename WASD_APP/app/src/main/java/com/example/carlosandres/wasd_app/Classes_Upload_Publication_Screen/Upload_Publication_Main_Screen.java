@@ -26,18 +26,10 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
     private final int SELECT_PICTURE=200;
     private ImageView imageView;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_publication_main_screen);
-
-
-
-
 
         final CharSequence [] options = {"Gallery", "Cancel"};
         imageView = (ImageView)findViewById(R.id.imageView4);
@@ -55,7 +47,6 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                             intent.setType("image/*");
                             startActivityForResult(intent.createChooser(intent, "Cancel"), SELECT_PICTURE);
-
                         }else if(options[selectOP]=="Cancel"){
                             dialog.dismiss();
                         }
