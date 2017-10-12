@@ -33,7 +33,7 @@ public class Main_Main_Screen extends AppCompatActivity
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private String[] pageTitle = {"Publications", "Others"};
+    private String[] pageTitle = {"Publications", "Profile"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
