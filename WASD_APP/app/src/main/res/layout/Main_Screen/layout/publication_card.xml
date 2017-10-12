@@ -20,7 +20,7 @@
 
             <ImageView
                 android:id="@+id/imgPublcationS"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:layout_marginLeft="2dp"
@@ -48,19 +48,19 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="245dp"
+                android:layout_marginTop="8dp"
                 android:background="#333333"
                 android:text="Comentario de la publicacion"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/LayoutPublic"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.495" />
+                app:layout_constraintTop_toBottomOf="@+id/LayoutUser"
+                app:layout_constraintVertical_bias="0.963" />
 
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/LayoutUser"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
@@ -68,6 +68,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:background="#333333"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.352"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -78,10 +79,13 @@
 
                 <TextView
                     android:id="@+id/txtUser"
-                    android:layout_width="218dp"
-                    android:layout_height="28dp"
+                    android:layout_width="197dp"
+                    android:layout_height="31dp"
                     android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_toEndOf="@+id/imgbtnUser"
@@ -89,12 +93,13 @@
                     android:background="@null"
                     android:text="RAGHYT"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
-                    app:layout_constraintHorizontal_bias="0.525"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txtUbication"
+                    app:layout_constraintLeft_toRightOf="@+id/imgbtnUser"
+                    app:layout_constraintRight_toLeftOf="@+id/imgOptionMenu"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.053" />
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_editor_absoluteY="1dp"
+                    app:layout_constraintHorizontal_bias="0.538" />
 
 
                 <ImageButton
@@ -104,36 +109,29 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="8dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="8dp"
                     android:layout_marginStart="15dp"
                     app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.007"
+                    app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
                 <TextView
                     android:id="@+id/txtUbication"
                     android:layout_width="127dp"
                     android:layout_height="18dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="6dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:background="@null"
                     android:text="Medellín, Colombia"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.357"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintHorizontal_bias="0.084"
+                    app:layout_constraintLeft_toRightOf="@+id/imgbtnUser"
+                    app:layout_constraintRight_toLeftOf="@+id/imgOptionMenu" />
 
                 <ImageButton
                     android:id="@+id/imgOptionMenu"
@@ -147,7 +145,7 @@
                     android:layout_marginTop="8dp"
                     android:background="@color/cardview_shadow_end_color"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.939"
+                    app:layout_constraintHorizontal_bias="0.941"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -159,16 +157,15 @@
 
             <RelativeLayout
                 android:id="@+id/LayoutPublic"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="82dp"
+                android:background="#333333"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.273"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LayoutUser"
-                app:layout_constraintVertical_bias="1.0"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="81dp">
+                app:layout_constraintVertical_bias="1.0">
 
 
                 <ImageButton
@@ -176,8 +173,9 @@
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
-                    android:layout_alignTop="@+id/BtnPro"
+                    android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
                     android:background="@android:color/holo_red_dark"
                     app:srcCompat="@drawable/share_publish_publication_card_screen"
                     tools:layout_editor_absoluteX="0dp"
@@ -200,9 +198,11 @@
                     android:id="@+id/txtNumComents"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/BtnComment"
+                    android:layout_alignRight="@+id/BtnComment"
                     android:layout_below="@+id/BtnComment"
-                    android:layout_toEndOf="@+id/BtnShare"
-                    android:layout_toRightOf="@+id/BtnShare"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
                     android:text="Comentarios"
                     tools:layout_editor_absoluteX="0dp"
                     tools:layout_editor_absoluteY="81dp" />
@@ -212,9 +212,9 @@
                     style="@android:style/Widget.ImageButton"
                     android:layout_width="110dp"
                     android:layout_height="35dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_alignTop="@+id/BtnShare"
+                    android:layout_toLeftOf="@+id/BtnShare"
+                    android:layout_toStartOf="@+id/BtnShare"
                     android:background="@android:color/holo_orange_light"
                     app:srcCompat="@drawable/star_like_publish_publication_card_screen"
                     tools:layout_editor_absoluteX="0dp"
@@ -224,9 +224,11 @@
                     android:id="@+id/txtNumberPro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/BtnPro"
+                    android:layout_alignStart="@+id/BtnPro"
                     android:layout_below="@+id/BtnPro"
-                    android:layout_toLeftOf="@+id/BtnShare"
-                    android:layout_toStartOf="@+id/BtnShare"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginStart="31dp"
                     android:text="55 PRO"
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="522dp" />

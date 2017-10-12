@@ -72,8 +72,8 @@ public class Publication_Adapter_Main_Screen extends RecyclerView.Adapter<Public
                 @Override
                 public void onClick(View v) {
 
-                    final int Duration = 350;
-                    final  int Time_After = 100;
+                    final int Duration = 400;
+                    final  int Time_After = 150;
 
                     AlphaAnimation Animation = new AlphaAnimation(0.0f,1.0f);
                     Animation.setDuration(Duration);
