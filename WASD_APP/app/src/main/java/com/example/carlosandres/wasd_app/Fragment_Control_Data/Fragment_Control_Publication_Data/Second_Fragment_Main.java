@@ -7,11 +7,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.R;
+
+import java.util.ArrayList;
+
+import static android.R.layout.simple_list_item_1;
 
 /**
  * Created by hp on 10/10/2017.
@@ -19,7 +25,6 @@ import com.example.carlosandres.wasd_app.R;
 
 public class Second_Fragment_Main extends Fragment {
 
-    public Button btnConfig;
 
     @Nullable
     @Override
@@ -30,15 +35,18 @@ public class Second_Fragment_Main extends Fragment {
 
     public void onViewCreated(View v, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(v, savedInstanceState);
+/*
+        ListView miLista = (ListView) getView().findViewById(R.id.ListView_1);
+        ArrayList<String> coleccion = new ArrayList<>();
+        coleccion.add(0, "Noticia 1");
+        coleccion.add(1, "Noticia 2");
+        coleccion.add(2, "Noticia 3");
+        coleccion.add(3, "Noticia 4");
+        coleccion.add(4, "Noticia 5");
 
-        btnConfig = (Button) v.findViewById(R.id.btnConfig);
-        btnConfig.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Coming Soon...", Toast.LENGTH_SHORT).show();
-            }
-        });
-
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1);
+        miLista.setAdapter(adaptador);
+*/
     }
 
 }
