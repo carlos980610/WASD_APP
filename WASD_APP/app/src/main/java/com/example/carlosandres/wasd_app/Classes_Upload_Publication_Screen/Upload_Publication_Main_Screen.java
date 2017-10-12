@@ -123,7 +123,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
         }
         return false;
     }
-    
+
     private void openCamera() {
         mayRequestStoragePermission();
         File file = new File(Environment.getExternalStorageDirectory(), MEDIA_DIRECTORY);
