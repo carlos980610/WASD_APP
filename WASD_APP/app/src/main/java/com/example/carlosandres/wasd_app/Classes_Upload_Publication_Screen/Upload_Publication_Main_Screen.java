@@ -115,7 +115,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                 @TargetApi(Build.VERSION_CODES.M)
                 @Override
                 public void onClick(View v) {
-                    requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
+                    req uestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
                 }
             });
         }else{
