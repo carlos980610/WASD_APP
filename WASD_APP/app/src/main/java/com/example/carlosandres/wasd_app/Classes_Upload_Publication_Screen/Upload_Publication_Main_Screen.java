@@ -1,6 +1,7 @@
 package com.example.carlosandres.wasd_app.Classes_Upload_Publication_Screen;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -11,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -25,6 +27,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
+import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_UpLoad_Publication;
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
 
@@ -49,19 +53,26 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
     private RelativeLayout mRlView;
     private String mPath;
 
+    Context App_Context = this;
+    boolean successful = false;
+
+    Bitmap bitmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_publication_main_screen);
 
+        final SP_UpLoad_Publication SP_U_P = new SP_UpLoad_Publication(App_Context);
 
 
-
-
-
-
-
-
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.UpButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                successful = SP_U_P.Save_Image_Procedure(bitmap);
+            }
+        });
 
 
 
@@ -115,7 +126,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                 @TargetApi(Build.VERSION_CODES.M)
                 @Override
                 public void onClick(View v) {
-                    req uestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
+                    requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
                 }
             });
         }else{
@@ -175,7 +186,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                             });
 
 
-                    Bitmap bitmap = BitmapFactory.decodeFile(mPath);
+                    bitmap = BitmapFactory.decodeFile(mPath);
                     mSetImage.setImageBitmap(bitmap);
                     break;
             }
