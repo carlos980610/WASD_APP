@@ -70,15 +70,10 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                successful = SP_U_P.Save_Image_Procedure(bitmap);
+                //successful = SP_U_P.Save_Image_Procedure(bitmap);
             }
         });
-
-
-
-
-
-
+        
 
 
 
