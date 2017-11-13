@@ -32,6 +32,7 @@ import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_P
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 
 import static android.Manifest.permission.CAMERA;
@@ -70,7 +71,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //successful = SP_U_P.Save_Image_Procedure(bitmap);
+                successful = SP_U_P.Save_Image_Procedure(getBytesFromBitmap(bitmap));
             }
         });
         
@@ -186,5 +187,15 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+
+    public static byte[] getBytesFromBitmap(Bitmap bitmap) {
+        if (bitmap!=null) {
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 70, stream);
+            return stream.toByteArray();
+        }
+        return null;
     }
 }

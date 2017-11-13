@@ -41,7 +41,7 @@ public class SP_UpLoad_Publication {
         App_Context = Get_App_Context;
     }
 
-    public boolean Save_Image_Procedure (Blob image_publication){
+    public boolean Save_Image_Procedure (byte[] image_publication){
 
         //Establish and open data base connection
         DataBaseManager DBManager = new DataBaseManager(App_Context);
