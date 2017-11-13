@@ -28,7 +28,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/lblNickName_P"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/imageView3"
@@ -88,8 +88,8 @@
                 android:textColor="#000"
                 android:textSize="10dp"
                 android:layout_above="@+id/progressBar2"
-                android:layout_toRightOf="@+id/textView20"
-                android:layout_toEndOf="@+id/textView20" />
+                android:layout_toRightOf="@+id/lblNickName_P"
+                android:layout_toEndOf="@+id/lblNickName_P" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -104,12 +104,12 @@
                 app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/lblUserName_P"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView20"
-                android:layout_alignStart="@+id/textView20"
-                android:layout_below="@+id/textView20"
+                android:layout_alignLeft="@+id/lblNickName_P"
+                android:layout_alignStart="@+id/lblNickName_P"
+                android:layout_below="@+id/lblNickName_P"
                 android:text="Innova Solutions Coporation"
                 android:textColor="#000" />
 
@@ -142,8 +142,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textView27"
-                android:layout_alignLeft="@+id/textView20"
-                android:layout_alignStart="@+id/textView20"
+                android:layout_alignLeft="@+id/lblNickName_P"
+                android:layout_alignStart="@+id/lblNickName_P"
                 android:text="50"
                 android:textColor="#000" />
 

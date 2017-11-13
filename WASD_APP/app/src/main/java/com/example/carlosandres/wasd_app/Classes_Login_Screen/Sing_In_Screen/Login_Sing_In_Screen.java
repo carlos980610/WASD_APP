@@ -15,6 +15,7 @@ import com.example.carlosandres.wasd_app.Classes_Main_Screen.Main_Main_Screen;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Sing_In;
 import com.example.carlosandres.wasd_app.Default_Process.Create_Default_Users;
 import com.example.carlosandres.wasd_app.R;
+import com.example.carlosandres.wasd_app.Sesion_Start.Sesion_Start;
 
 public class Login_Sing_In_Screen extends AppCompatActivity {
 
@@ -28,6 +29,8 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
 
     //Cheked procedures
     boolean Cheked_Storage_Procedures = false;
+
+    int temporal_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,7 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
         final CheckBox ckbKeepLoggedIn = (CheckBox) findViewById(R.id.ckbKeepLoggedIn);
 
 
-        final SP_Sing_In Sing_Ip_SP = new SP_Sing_In(App_Context);
+        final SP_Sing_In Sing_In_SP = new SP_Sing_In(App_Context);
 
 
         final Button btnLogIn = (Button) findViewById(R.id.btnSingIn);
@@ -60,11 +63,15 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
                     }
 
 
-                    Cheked_Storage_Procedures = Sing_Ip_SP.Sing_In_Procedure(User_Email, User_Password);
+                    Cheked_Storage_Procedures = Sing_In_SP.Sing_In_Procedure(User_Email, User_Password);
                     if (Cheked_Storage_Procedures){
                         Toast.makeText(getApplicationContext(), "Inicio de sesión realizada con exito", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), Main_Main_Screen.class);
                         startActivity(intent);
+
+                        Sesion_Start SS = new Sesion_Start(User_Email, getApplicationContext());
+                        temporal_id = SS.Get_User_By_Email();
+                        Toast.makeText(getApplicationContext(), "Id a enviar: "  + temporal_id, Toast.LENGTH_SHORT).show();
 
 
                         Create_Default_Users cdu = new Create_Default_Users();
@@ -78,5 +85,9 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
                     }
                 }
         });
+    }
+
+    public int Set_Id (){
+        return temporal_id + 1;
     }
 }

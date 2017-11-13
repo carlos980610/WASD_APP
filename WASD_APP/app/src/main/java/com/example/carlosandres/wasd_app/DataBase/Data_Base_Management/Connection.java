@@ -31,6 +31,8 @@ public class Connection extends SQLiteOpenHelper {
         db.execSQL(DataBaseManager.Create_Table_File_Image);
         db.execSQL(DataBaseManager.Create_Table_File_Video);
         db.execSQL(DataBaseManager.Create_Table_File_Gif);
+        //Trends Table
+        db.execSQL(DataBaseManager.Create_Table_Trend);
 
 
     }
@@ -50,6 +52,9 @@ public class Connection extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_File_Image);
         db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_File_Video);
         db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_File_Gif);
+        //Trend update
+        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_Trend);
+
         //Execute update process
         onCreate(db);
     }

@@ -21,6 +21,9 @@ android {
         main {
             res.srcDirs =
                     [
+                            //trends
+                            'src/main/res/layout/trends_screen',
+
                             //upload publication directories
                             'src/main/res/layout/upload_publication_screen',
 

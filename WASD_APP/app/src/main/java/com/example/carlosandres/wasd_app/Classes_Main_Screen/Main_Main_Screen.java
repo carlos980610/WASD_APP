@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen;
+import com.example.carlosandres.wasd_app.Classes_Trends_Screen.Trends_Main_Screen;
 import com.example.carlosandres.wasd_app.Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen;
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
@@ -33,7 +34,7 @@ public class Main_Main_Screen extends AppCompatActivity
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private String[] pageTitle = {"Publications", "Profile"};
+    private String[] pageTitle = {"Publicaciones", "Dia"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,7 +168,8 @@ public class Main_Main_Screen extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(), Upload_Publication_Main_Screen.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intent = new Intent(getApplicationContext(), Trends_Main_Screen.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

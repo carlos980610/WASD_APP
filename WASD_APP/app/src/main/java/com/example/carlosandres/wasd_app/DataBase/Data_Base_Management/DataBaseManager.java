@@ -10,6 +10,7 @@ import com.example.carlosandres.wasd_app.DataBase.Definitions.File_Video;
 import com.example.carlosandres.wasd_app.DataBase.Definitions.Personal_Chat;
 import com.example.carlosandres.wasd_app.DataBase.Definitions.Personal_Chat_Message;
 import com.example.carlosandres.wasd_app.DataBase.Definitions.Publication;
+import com.example.carlosandres.wasd_app.DataBase.Definitions.Trend;
 import com.example.carlosandres.wasd_app.DataBase.Definitions.User;
 
 /**
@@ -83,7 +84,12 @@ public class DataBaseManager {
             File_Image.Img_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             File_Image.Img_Publication + " BLOB);";
 
+    //Create table tblTrend
 
+    public static final String Create_Table_Trend = "CREATE TABLE IF NOT EXISTS " + Trend.Trend_Table_Name + "(" +
+            Trend.Trend_Id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            Trend.Trend_Title + " TEXT, " +
+            Trend.Trend_Content + " TEXT, ";
 
 
 

@@ -9,25 +9,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
-        <activity android:name=".Classes_Login_Screen.Main_Login_Screen.Login_Main_Screen" android:screenOrientation = "portrait"/>
-        <activity android:name=".Classes_Login_Screen.Sing_Up_Screen.Login_Sing_Up_Screen" android:screenOrientation = "portrait"/>
-        <activity android:name=".Classes_Login_Screen.Sing_In_Screen.Login_Sing_In_Screen" android:screenOrientation = "portrait"/>
-        <activity android:name=".Classes_Splash_Screen.Splash_Main_Screen" android:screenOrientation = "portrait">
+        <activity
+            android:name=".Classes_Login_Screen.Main_Login_Screen.Login_Main_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Classes_Login_Screen.Sing_Up_Screen.Login_Sing_Up_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Classes_Login_Screen.Sing_In_Screen.Login_Sing_In_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Classes_Splash_Screen.Splash_Main_Screen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.Your_Personal_Profile_Screen" android:screenOrientation = "portrait"/>
-        <activity android:name=".Support_Classes.Main_Support_Screen.Main_Support_Screen" android:screenOrientation = "portrait"/>
+        <activity
+            android:name=".Classes_Personal_Profile_Screen.Your_Personal_Profile_Screen.Your_Personal_Profile_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Support_Classes.Main_Support_Screen.Main_Support_Screen"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Classes_Main_Screen.Main_Main_Screen"
             android:label="@string/title_activity_main__main__screen"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:screenOrientation = "portrait"/>
-        <activity android:name=".Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen" android:screenOrientation = "portrait"/>
-        <activity android:name=".Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen" android:screenOrientation = "portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Classes_Trends_Screen.Trends_Main_Screen"></activity>
     </application>
 
 </manifest>
