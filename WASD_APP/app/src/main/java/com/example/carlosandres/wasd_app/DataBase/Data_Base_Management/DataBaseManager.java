@@ -89,7 +89,7 @@ public class DataBaseManager {
     public static final String Create_Table_Trend = "CREATE TABLE IF NOT EXISTS " + Trend.Trend_Table_Name + "(" +
             Trend.Trend_Id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             Trend.Trend_Title + " TEXT, " +
-            Trend.Trend_Content + " TEXT, ";
+            Trend.Trend_Content + " TEXT);";
 
 
 

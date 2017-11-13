@@ -25,7 +25,7 @@ public class Trends_Main_Screen extends AppCompatActivity {
         setContentView(R.layout.activity_trends_main_screen);
 
         ListView lv = (ListView) findViewById(R.id.lvTrends);
-        
+
         Create_Default_Trends cdt = new Create_Default_Trends();
         cdt.Create_Trends("Trend 1","Este es el contenido de la tendencia 1"); //Trend 1
         cdt.Create_Trends("Trend 2","Este es el contenido de la tendencia 2"); //Trend 2

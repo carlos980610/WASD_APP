@@ -41,19 +41,19 @@ public class Connection extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         /** Actualizar tablas de la base de datos si no estan creadas **/
         //User table update
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_User);
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_User + "'");
         //Publication and Comment table update
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_Publication);
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_Comment);
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_Publication + "'");
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_Comment + "'");
         //Personal Chat update
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_Personal_Chat);
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_Personal_Chat_Message);
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_Personal_Chat + "'");
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_Personal_Chat_Message + "'");
         //Publication Files table update
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_File_Image);
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_File_Video);
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_File_Gif);
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_File_Image + "'");
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_File_Video + "'");
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_File_Gif + "'");
         //Trend update
-        db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.Create_Table_Trend);
+        db.execSQL("DROP TABLE IF EXISTS '" + DataBaseManager.Create_Table_Trend + "'");
 
         //Execute update process
         onCreate(db);

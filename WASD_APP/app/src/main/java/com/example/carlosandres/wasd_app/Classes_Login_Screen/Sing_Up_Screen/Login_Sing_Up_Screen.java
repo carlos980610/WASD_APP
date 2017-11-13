@@ -107,7 +107,7 @@ public class Login_Sing_Up_Screen extends AppCompatActivity {
                        // }
 
                     }catch (Exception exception){
-                        Toast.makeText(getApplicationContext(), "No se ha logrado establecer la conexión, intentelo de nuevo más tarde", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "No se ha logrado establecer la conexión, intentelo de nuevo más tarde" + exception, Toast.LENGTH_SHORT).show();
 
                     }
                 }else{
