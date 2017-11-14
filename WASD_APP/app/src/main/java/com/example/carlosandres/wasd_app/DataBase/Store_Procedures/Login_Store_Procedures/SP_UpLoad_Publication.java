@@ -48,7 +48,7 @@ public class SP_UpLoad_Publication {
         DBConnection = DBManager.OpenDataBase(App_Context);
         SQLDataBase = DBConnection.getWritableDatabase();
         try {
-            DBQuery = "Insert into" + File_Image.File_Image_Table_Name + " Values " + image_publication;
+            DBQuery = "Insert into " + File_Image.File_Image_Table_Name + " Values " + image_publication;
             DBcursor = SQLDataBase.rawQuery(DBQuery, null);
             Successful = true;
         }

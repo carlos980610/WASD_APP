@@ -46,6 +46,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
     private final int PHOTO_CODE=100;
     private final int SELECT_PICTURE=200;
     private ImageView imageView;
+    private ImageView imageView1;
     private final int MY_PERMISSIONS = 100;
 
 
@@ -72,6 +73,15 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 successful = SP_U_P.Save_Image_Procedure(getBytesFromBitmap(bitmap));
+                imageView1 = (ImageView)findViewById(R.id.imageView5);
+                imageView1.setImageBitmap(bitmap);
+                if (successful){
+                    Snackbar.make(view, "Insert realizado: " + successful, Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }else{
+                    Snackbar.make(view, "NO NO " + successful, Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
         
@@ -102,7 +112,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                     }
                 });
                 builder.show();
-            }
+                }
         });
 
     }
@@ -169,6 +179,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                 case SELECT_PICTURE:
                     Uri path = data.getData();
                     imageView.setImageURI(path);
+                    imageView1.setImageURI(path);
                     break;
                 case PHOTO_CODE:
                     MediaScannerConnection.scanFile(this,
@@ -184,6 +195,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
 
                     bitmap = BitmapFactory.decodeFile(mPath);
                     mSetImage.setImageBitmap(bitmap);
+                    imageView1.setImageBitmap(bitmap);
                     break;
             }
         }
@@ -195,7 +207,8 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 70, stream);
             return stream.toByteArray();
+        }else{
+            return null;
         }
-        return null;
     }
 }
