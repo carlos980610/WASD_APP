@@ -82,7 +82,7 @@ public class DataBaseManager {
     //Create tblFile_Image
     public static final String Create_Table_File_Image = "CREATE TABLE IF NOT EXISTS " + File_Image.File_Image_Table_Name + "(" +
             File_Image.Img_Id_File_Publication + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            File_Image.Img_Publication + " BLOB);";
+            File_Image.Img_Publication + " TEXT);";  //Cambbia de BLOB a TEXT
 
     //Create table tblTrend
 

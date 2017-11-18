@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_UpLoad_Publication;
@@ -34,6 +35,7 @@ import com.example.carlosandres.wasd_app.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.net.URI;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -53,7 +55,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
     private ImageView mSetImage;
     private Button mOptionButton;
     private RelativeLayout mRlView;
-    private String mPath;
+    private String mPath; //Variable que guarda la ruta de la imagen en el celular
 
     Context App_Context = this;
     boolean successful = false;
@@ -67,14 +69,14 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
 
         final SP_UpLoad_Publication SP_U_P = new SP_UpLoad_Publication(App_Context);
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.UpButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                successful = SP_U_P.Save_Image_Procedure(getBytesFromBitmap(bitmap));
+                successful = SP_U_P.Save_Image_Procedure(mPath);
                 imageView1 = (ImageView)findViewById(R.id.imageView5);
-                imageView1.setImageBitmap(bitmap);
+                Uri mu = Uri.parse(mPath);
+                imageView1.setImageURI(mu);
                 if (successful){
                     Snackbar.make(view, "Insert realizado: " + successful, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -82,6 +84,8 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                     Snackbar.make(view, "NO NO " + successful, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+                Snackbar.make(view, "Path de la imagen: " + mPath, Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
         
@@ -96,7 +100,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                 imageView = (ImageView)findViewById(R.id.imageView4);
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Upload_Publication_Main_Screen.this);
-                builder.setTitle("Seleccione el canal");
+                builder.setTitle("Seleccione la fuente");
                 builder.setItems(options  , new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int selectOP){
@@ -112,10 +116,13 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                     }
                 });
                 builder.show();
+
                 }
         });
 
+
     }
+
 
     private boolean mayRequestStoragePermission() {
 
@@ -178,9 +185,13 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
             switch (requestCode){
                 case SELECT_PICTURE:
                     Uri path = data.getData();
-                    imageView.setImageURI(path);
-                    imageView1.setImageURI(path);
+                    Toast.makeText(getApplicationContext(), "Path path: " + path, Toast.LENGTH_SHORT).show();
+                    mPath = path.toString();
+                    //imageView.setImageURI(path);
+                    //imageView1.setImageURI(path);
+
                     break;
+                 /*
                 case PHOTO_CODE:
                     MediaScannerConnection.scanFile(this,
                             new String[]{mPath}, null,
@@ -196,13 +207,13 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                     bitmap = BitmapFactory.decodeFile(mPath);
                     mSetImage.setImageBitmap(bitmap);
                     imageView1.setImageBitmap(bitmap);
-                    break;
+                    break;*/
             }
         }
     }
 
 
-    public static byte[] getBytesFromBitmap(Bitmap bitmap) {
+    /*public static byte[] getBytesFromBitmap(Bitmap bitmap) {
         if (bitmap!=null) {
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 70, stream);
@@ -210,5 +221,5 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
         }else{
             return null;
         }
-    }
+    }*/
 }
