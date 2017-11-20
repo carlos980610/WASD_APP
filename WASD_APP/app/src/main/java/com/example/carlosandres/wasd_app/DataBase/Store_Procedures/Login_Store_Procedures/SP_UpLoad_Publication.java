@@ -56,7 +56,7 @@ public class SP_UpLoad_Publication {
             Conection_Status = false;
             new AlertDialog.Builder(App_Context)
                     .setTitle("Error de conexión al subir publicación")
-                    .setMessage("No se logró establecer una conexión con la base de datos, intentelo de nuevo")
+                    .setMessage("No se logró establecer una conexión con la base de datos, intentelo de nuevo" + exception)
                     .setCancelable(true)
                     .setPositiveButton("Intentar de nuevo", new DialogInterface.OnClickListener()
                     {
