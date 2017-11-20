@@ -1,5 +1,6 @@
 package com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
@@ -10,8 +11,12 @@ import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.Connectio
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
 import com.example.carlosandres.wasd_app.DataBase.Definitions.File_Image;
 import com.example.carlosandres.wasd_app.DataBase.Definitions.User;
+import com.example.carlosandres.wasd_app.DataBase.Entities.Image_File_Publication;
+import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
 
 import java.sql.Blob;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Carlos Andrés on 30/10/2017.
@@ -41,16 +46,33 @@ public class SP_UpLoad_Publication {
         App_Context = Get_App_Context;
     }
 
-    public boolean Save_Image_Procedure (String image_publication){
+    public boolean Save_Image_Procedure (List<Image_File_Publication> image_publication){
+
+        /*List<Image_File_Publication> List_New_Img_Public = new ArrayList<>();
+
+        Image_File_Publication new_img_publ = new Image_File_Publication();
+        new_img_publ.File_Publication = image_publication;
+        List_New_Img_Public.add(new_img_publ);*/
 
         //Establish and open data base connection
         DataBaseManager DBManager = new DataBaseManager(App_Context);
         DBConnection = DBManager.OpenDataBase(App_Context);
         SQLDataBase = DBConnection.getWritableDatabase();
         try {
-            DBQuery = "Insert into " + File_Image.File_Image_Table_Name + " Values " + image_publication;
-            DBcursor = SQLDataBase.rawQuery(DBQuery, null);
-            Successful = true;
+
+            for (Image_File_Publication Img_Publication_List: image_publication){
+                if (image_publication != null){
+                    Long Check_New_User_Insert = SQLDataBase.insert(User.User_Table_Name, null, Content_Values_Publication(Img_Publication_List));
+                    if (Check_New_User_Insert != -1){
+                        Successful = true;
+                    }
+                }
+            }
+
+            /*DBQuery = "Insert into " + File_Image.File_Image_Table_Name + " Values " + image_publication;
+            SQLDataBase.insert(File_Image.Img_Publication, null, Content_Values_Publication(image_publication));
+            //DBcursor = SQLDataBase.rawQuery(DBQuery, null);
+            Successful = true;*/
         }
         catch (Exception exception){
             Conection_Status = false;
@@ -70,5 +92,12 @@ public class SP_UpLoad_Publication {
         DBManager.CloseDataBase(DBConnection);
 
         return Successful;
+    }
+
+    public ContentValues Content_Values_Publication(Image_File_Publication Img)
+    {
+        ContentValues values = new ContentValues();
+        values.put(File_Image.Img_Publication ,Img.File_Publication);
+        return values;
     }
 }

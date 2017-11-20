@@ -24,11 +24,13 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
+import com.example.carlosandres.wasd_app.DataBase.Entities.Image_File_Publication;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_UpLoad_Publication;
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
@@ -36,6 +38,8 @@ import com.example.carlosandres.wasd_app.R;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -50,6 +54,8 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
     private ImageView imageView;
     private ImageView imageView1;
     private final int MY_PERMISSIONS = 100;
+
+    //private EditText editText;
 
 
     private ImageView mSetImage;
@@ -67,13 +73,19 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_publication_main_screen);
 
+        final List<Image_File_Publication> List_New_Img_Public = new ArrayList<>(); //Final (?)
+
+        Image_File_Publication new_img_publ = new Image_File_Publication();
+        new_img_publ.File_Publication = mPath;
+        List_New_Img_Public.add(new_img_publ);
+
         final SP_UpLoad_Publication SP_U_P = new SP_UpLoad_Publication(App_Context);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.UpButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                successful = SP_U_P.Save_Image_Procedure(mPath);
+                successful = SP_U_P.Save_Image_Procedure(List_New_Img_Public);
                 imageView1 = (ImageView)findViewById(R.id.imageView5);
                 Uri mu = Uri.parse(mPath);
                 imageView1.setImageURI(mu);
@@ -98,6 +110,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
             public void onClick(View v){
                 final CharSequence [] options = {"Galería", "Camara", "Cancelar"};
                 imageView = (ImageView)findViewById(R.id.imageView4);
+                //editText = (EditText)findViewById(R.id.editText);
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Upload_Publication_Main_Screen.this);
                 builder.setTitle("Seleccione la fuente");
@@ -116,6 +129,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                     }
                 });
                 builder.show();
+
 
                 }
         });
