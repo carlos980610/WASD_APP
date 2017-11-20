@@ -10,5 +10,5 @@ public class Image_File_Publication {
 
     //Attributes of Image Publication
     public String Id_Img_File_Publication;
-    public Blob File_Publication;
+    public String File_Publication;
 }
