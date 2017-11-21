@@ -62,16 +62,16 @@ public class SP_UpLoad_Publication {
 
             for (Image_File_Publication Img_Publication_List: image_publication){
                 if (image_publication != null){
-                    Long Check_New_User_Insert = SQLDataBase.insert(User.User_Table_Name, null, Content_Values_Publication(Img_Publication_List));
+                    Long Check_New_User_Insert = SQLDataBase.insert(File_Image.Img_Publication, null, Content_Values_Publication(Img_Publication_List));
                     if (Check_New_User_Insert != -1){
                         Successful = true;
                     }
                 }
             }
-
-            /*DBQuery = "Insert into " + File_Image.File_Image_Table_Name + " Values " + image_publication;
-            SQLDataBase.insert(File_Image.Img_Publication, null, Content_Values_Publication(image_publication));
-            //DBcursor = SQLDataBase.rawQuery(DBQuery, null);
+            /*
+            DBQuery = "Insert into " + File_Image.File_Image_Table_Name + " Values " + image_publication;
+            //SQLDataBase.insert(File_Image.Img_Publication, null, Content_Values_Publication(image_publication));
+            DBcursor = SQLDataBase.rawQuery(DBQuery, null);
             Successful = true;*/
         }
         catch (Exception exception){
