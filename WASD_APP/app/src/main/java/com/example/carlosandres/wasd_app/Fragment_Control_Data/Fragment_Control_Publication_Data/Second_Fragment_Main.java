@@ -13,9 +13,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.carlosandres.wasd_app.DataBase.Entities.User_Entity;
 import com.example.carlosandres.wasd_app.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.R.layout.simple_list_item_1;
 
@@ -25,6 +27,7 @@ import static android.R.layout.simple_list_item_1;
 
 public class Second_Fragment_Main extends Fragment {
 
+    public ListView lv;
 
     @Nullable
     @Override
@@ -35,7 +38,17 @@ public class Second_Fragment_Main extends Fragment {
 
     public void onViewCreated(View v, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(v, savedInstanceState);
-/*
+
+        /*ArrayList<User_Entity> User = new ArrayList<User_Entity>();
+        lv = (ListView) lv.findViewById(R.id.UserView);
+
+        User_Adapter_Main_Screen adapter = new User_Adapter_Main_Screen(this.getActivity(), User);
+
+        lv.setAdapter(adapter);
+*/
+
+
+        /*
         ListView miLista = (ListView) getView().findViewById(R.id.ListView_1);
         ArrayList<String> coleccion = new ArrayList<>();
         coleccion.add(0, "Noticia 1");

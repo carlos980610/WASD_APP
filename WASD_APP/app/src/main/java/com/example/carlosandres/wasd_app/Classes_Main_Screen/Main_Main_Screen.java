@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.carlosandres.wasd_app.Classes_News_Screen.News_Main_Screen;
 import com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen;
 import com.example.carlosandres.wasd_app.Classes_Trends_Screen.Trends_Main_Screen;
 import com.example.carlosandres.wasd_app.Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen;
@@ -34,7 +35,7 @@ public class Main_Main_Screen extends AppCompatActivity
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private String[] pageTitle = {"Publicaciones", "Dia"};
+    private String[] pageTitle = {"Publicaciones", "Usuarios"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,6 +170,9 @@ public class Main_Main_Screen extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
             Intent intent = new Intent(getApplicationContext(), Trends_Main_Screen.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_news) {
+            Intent intent = new Intent(getApplicationContext(), News_Main_Screen.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
 
