@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.carlosandres.wasd_app.Classes_Login_Screen.Sing_In_Screen.Login_Sing_In_Screen;
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.Connection;
+import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Check_Insert_Image;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Get_User_Data;
 import com.example.carlosandres.wasd_app.R;
 import com.example.carlosandres.wasd_app.Sesion_Start.Sesion_Start;
@@ -38,6 +39,9 @@ public class My_Personal_Profile_Screen extends AppCompatActivity {
 
         lbl_User_Name.setText(name);
         lbl_User_NickName.setText(nickname);
+
+
+
 
     }
 }

@@ -31,6 +31,7 @@ import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.DataBase.Data_Base_Management.DataBaseManager;
 import com.example.carlosandres.wasd_app.DataBase.Entities.Image_File_Publication;
+import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_Check_Insert_Image;
 import com.example.carlosandres.wasd_app.DataBase.Store_Procedures.Login_Store_Procedures.SP_UpLoad_Publication;
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
@@ -75,7 +76,7 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
 
         final List<Image_File_Publication> List_New_Img_Public = new ArrayList<>(); //Final (?)
 
-        Image_File_Publication new_img_publ = new Image_File_Publication();
+        final Image_File_Publication new_img_publ = new Image_File_Publication();
         new_img_publ.File_Publication = mPath;
         List_New_Img_Public.add(new_img_publ);
 
@@ -89,6 +90,11 @@ public class Upload_Publication_Main_Screen extends AppCompatActivity {
                 imageView1 = (ImageView)findViewById(R.id.imageView5);
                 Uri mu = Uri.parse(mPath);
                 imageView1.setImageURI(mu);
+
+
+                SP_Check_Insert_Image CII = new SP_Check_Insert_Image(getApplicationContext());
+                CII.getImageUrl();
+
                 if (successful){
                     Snackbar.make(view, "Insert realizado: " + successful, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
