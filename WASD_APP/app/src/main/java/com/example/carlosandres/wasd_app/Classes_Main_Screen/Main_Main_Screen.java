@@ -3,7 +3,6 @@ package com.example.carlosandres.wasd_app.Classes_Main_Screen;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
@@ -23,6 +22,7 @@ import com.example.carlosandres.wasd_app.Classes_Trends_Screen.Trends_Main_Scree
 import com.example.carlosandres.wasd_app.Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen;
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
+import com.example.carlosandres.wasd_app.Support_Classes.Main_Support_Screen.About;
 
 public class Main_Main_Screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -147,6 +147,22 @@ public class Main_Main_Screen extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        // Handle item selection
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                intent = new Intent(getApplicationContext(), About.class);
+                startActivity(intent);
+                break;
+            case R.id.action_about:
+                intent = new Intent(getApplicationContext(), About.class);
+                startActivity(intent);
+            case R.id.action_exit:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {

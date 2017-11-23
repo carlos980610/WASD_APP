@@ -45,7 +45,8 @@
             android:name=".Classes_Upload_Publication_Screen.Upload_Publication_Main_Screen"
             android:screenOrientation="portrait" />
         <activity android:name=".Classes_Trends_Screen.Trends_Main_Screen" />
-        <activity android:name=".Classes_News_Screen.News_Main_Screen"></activity>
+        <activity android:name=".Classes_News_Screen.News_Main_Screen" />
+        <activity android:name=".Support_Classes.Main_Support_Screen.About"></activity>
     </application>
 
 </manifest>

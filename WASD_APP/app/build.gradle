@@ -21,6 +21,9 @@ android {
         main {
             res.srcDirs =
                     [
+                            //about
+                            'src/main/res/layout/About',
+
                             //trends
                             'src/main/res/layout/trends_screen',
 

@@ -83,6 +83,9 @@ public class Login_Sing_In_Screen extends AppCompatActivity {
                     }else{
 
                     }
+                    txt_User_Email.setText("");
+                    txt_User_Password.setText("");
+
                 }
         });
     }
