@@ -46,7 +46,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".Classes_Trends_Screen.Trends_Main_Screen" />
         <activity android:name=".Classes_News_Screen.News_Main_Screen" />
-        <activity android:name=".Support_Classes.Main_Support_Screen.About"></activity>
+        <activity android:name=".Support_Classes.Main_Support_Screen.About" />
+        <activity android:name=".Support_Classes.support_screen"></activity>
     </application>
 
 </manifest>

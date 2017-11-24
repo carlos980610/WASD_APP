@@ -1,15 +1,15 @@
-package com.example.carlosandres.wasd_app.Support_Classes.Main_Support_Screen;
+package com.example.carlosandres.wasd_app.Support_Classes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.carlosandres.wasd_app.R;
 
-class Main_Support_Screen extends AppCompatActivity {
+public class support_screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_support_screen);
+        setContentView(R.layout.activity_support_screen);
     }
 }

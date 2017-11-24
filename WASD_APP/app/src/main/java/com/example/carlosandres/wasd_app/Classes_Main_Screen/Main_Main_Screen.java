@@ -23,6 +23,7 @@ import com.example.carlosandres.wasd_app.Classes_Upload_Publication_Screen.Uploa
 import com.example.carlosandres.wasd_app.Fragment_Control_Data.Fragment_Control_Publication_Data.View_Pager_Adapter;
 import com.example.carlosandres.wasd_app.R;
 import com.example.carlosandres.wasd_app.Support_Classes.Main_Support_Screen.About;
+import com.example.carlosandres.wasd_app.Support_Classes.support_screen;
 
 public class Main_Main_Screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -151,7 +152,7 @@ public class Main_Main_Screen extends AppCompatActivity
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_settings:
-                intent = new Intent(getApplicationContext(), About.class);
+                intent = new Intent(getApplicationContext(), support_screen.class);
                 startActivity(intent);
                 break;
             case R.id.action_about:
