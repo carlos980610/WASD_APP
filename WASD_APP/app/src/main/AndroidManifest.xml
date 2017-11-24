@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.carlosandres.wasd_app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -47,7 +50,8 @@
         <activity android:name=".Classes_Trends_Screen.Trends_Main_Screen" />
         <activity android:name=".Classes_News_Screen.News_Main_Screen" />
         <activity android:name=".Support_Classes.Main_Support_Screen.About" />
-        <activity android:name=".Support_Classes.support_screen"></activity>
+        <activity android:name=".Support_Classes.support_screen" />
+        <activity android:name=".Fragment_Control_Data.Fragment_Control_Publication_Data.Second_Fragment_Main_Screen"></activity>
     </application>
 
 </manifest>

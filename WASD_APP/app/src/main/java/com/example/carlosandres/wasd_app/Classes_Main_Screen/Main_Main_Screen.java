@@ -1,6 +1,7 @@
 package com.example.carlosandres.wasd_app.Classes_Main_Screen;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.carlosandres.wasd_app.Classes_News_Screen.News_Main_Screen;
 import com.example.carlosandres.wasd_app.Classes_Personal_Profile_Screen.My_Personal_Profile_Screen.My_Personal_Profile_Screen;
@@ -36,7 +38,7 @@ public class Main_Main_Screen extends AppCompatActivity
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private String[] pageTitle = {"Publicaciones", "Usuarios"};
+    private String[] pageTitle = {"Publicaciones", "Videos", "Usuarios"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,6 +181,8 @@ public class Main_Main_Screen extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        String url;
+        Intent i;
 
         if (id == R.id.nav_camera) {
             Intent intent = new Intent(getApplicationContext(), My_Personal_Profile_Screen.class);
@@ -193,11 +197,21 @@ public class Main_Main_Screen extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(), News_Main_Screen.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(getApplicationContext(), support_screen.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
-
+            url = "https://play.google.com/store/apps?hl=es";
+            i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+            Toast.makeText(getApplicationContext(), "Redireccionando a Play Store", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {
-
+            url = "https://accounts.google.com/signin/v2/identifier?hl=ES&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+            i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+            Toast.makeText(getApplicationContext(), "Redireccionando a Play Store", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

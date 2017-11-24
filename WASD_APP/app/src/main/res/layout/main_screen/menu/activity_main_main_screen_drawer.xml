@@ -16,7 +16,7 @@
             android:title="Tendencias y Noticias" />
         <item
             android:id="@+id/nav_news"
-            android:icon="@drawable/view_trends_icon_navigation_drawer_main_main_screen"
+            android:icon="@drawable/icon_news_drawable"
             android:title="Noticias" />
         <item
             android:id="@+id/nav_manage"

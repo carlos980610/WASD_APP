@@ -20,18 +20,17 @@ public class View_Pager_Adapter extends FragmentPagerAdapter {
             return new First_Fragment_Main_Screen();
         }
 
-        /*else if (position == 1) {
-            //return new SecondFragment();
-        }*/
-
-        else
-            return new Second_Fragment_Main();
-
+        else if (position == 1) {
+            return new Second_Fragment_Main_Screen();
+        }
+        else {
+            return new Third_Fragment_Main();
+        }
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }
 

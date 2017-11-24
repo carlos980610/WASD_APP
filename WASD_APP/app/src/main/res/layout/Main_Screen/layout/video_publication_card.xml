@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="444dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9">
+
+            <VideoView
+                android:id="@+id/VidPublcationS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_constraintBottom_creator="1"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintRight_creator="1"
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/txtPublicDescription"
+                android:layout_width="338dp"
+                android:layout_height="33dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#333333"
+                android:text="Comentario de la publicacion"
+                app:layout_constraintBottom_toTopOf="@+id/LayoutPublic"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutUser"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/LayoutUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#333333"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.352"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/txtUser"
+                    android:layout_width="197dp"
+                    android:layout_height="31dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/imgbtnUser"
+                    android:layout_toRightOf="@+id/imgbtnUser"
+                    android:background="@null"
+                    android:text="RAGHYT"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    app:layout_constraintBottom_toTopOf="@+id/txtUbication"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toRightOf="@+id/imgbtnUser"
+                    app:layout_constraintRight_toLeftOf="@+id/imgOptionMenu"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <ImageButton
+                    android:id="@+id/imgbtnUser"
+                    android:layout_width="71dp"
+                    android:layout_height="57dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imgPublcationS"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+                <TextView
+                    android:id="@+id/txtUbication"
+                    android:layout_width="127dp"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@null"
+                    android:text="Medellín, Colombia"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
+                    app:layout_constraintLeft_toRightOf="@+id/imgbtnUser"
+                    app:layout_constraintRight_toLeftOf="@+id/imgOptionMenu" />
+
+                <ImageButton
+                    android:id="@+id/imgOptionMenu"
+                    android:layout_width="29dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/more_options_publish_publication_card_screen" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/LayoutPublic"
+                android:layout_width="0dp"
+                android:layout_height="82dp"
+                android:background="#333333"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutUser"
+                app:layout_constraintVertical_bias="1.0">
+
+
+                <ImageButton
+                    android:id="@+id/BtnShare"
+                    style="@android:style/Widget.ImageButton"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@android:color/holo_red_dark"
+                    app:srcCompat="@drawable/share_publish_publication_card_screen"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="81dp" />
+
+                <ImageButton
+                    android:id="@+id/BtnComment"
+                    style="@android:style/Widget.ImageButton"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/BtnShare"
+                    android:layout_toEndOf="@+id/BtnShare"
+                    android:layout_toRightOf="@+id/BtnShare"
+                    android:background="@color/colorPrimaryDark"
+                    app:srcCompat="@drawable/insert_comment_publication_card_screen"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="81dp" />
+
+                <TextView
+                    android:id="@+id/txtNumComents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/BtnComment"
+                    android:layout_alignRight="@+id/BtnComment"
+                    android:layout_below="@+id/BtnComment"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:text="33 Comentarios"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="81dp" />
+
+                <ImageButton
+                    android:id="@+id/BtnPro"
+                    style="@android:style/Widget.ImageButton"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/BtnShare"
+                    android:layout_toLeftOf="@+id/BtnShare"
+                    android:layout_toStartOf="@+id/BtnShare"
+                    android:background="@android:color/holo_orange_light"
+                    app:srcCompat="@drawable/star_like_publish_publication_card_screen"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="81dp" />
+
+                <TextView
+                    android:id="@+id/txtNumberPro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/BtnPro"
+                    android:layout_alignStart="@+id/BtnPro"
+                    android:layout_below="@+id/BtnPro"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginStart="31dp"
+                    android:text="55 PRO"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="522dp" />
+
+
+            </RelativeLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
