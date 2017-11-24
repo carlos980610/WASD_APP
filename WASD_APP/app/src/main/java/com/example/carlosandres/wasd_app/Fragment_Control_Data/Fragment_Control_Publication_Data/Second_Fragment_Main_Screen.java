@@ -28,10 +28,10 @@ public class Second_Fragment_Main_Screen extends Fragment {
 
         final List<Video_Publication_Main_Screen> items = new ArrayList<Video_Publication_Main_Screen>();
 
-        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.bteaser, "Esto es un texto de publicacion", "45", "87", "Iva025", "Envigado", R.drawable.i));
-        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.ascteaser, "Esto es un texto de publicacion", "45", "87", "Iva025", "Envigado", R.drawable.i));
-        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.nfsteaser, "Esto es un texto de publicacion", "45", "87", "Iva025", "Envigado", R.drawable.i));
-        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.codteaser, "Esto es un texto de publicacion", "45", "87", "Iva025", "Envigado", R.drawable.i));
+        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.bteaser, "Teaser B1", "145", "87", "JdeJOhn", "Poblado", R.drawable.newuser01));
+        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.ascteaser, "Teaser del origen (Assassins Creed: Origins)", "785", "657", "Rodolfio02", "Itagui", R.drawable.newuser01));
+        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.nfsteaser, "Uno más para este año", "28", "74", "Eltio01", "Los Angeles", R.drawable.newuser01));
+        items.add(new Video_Publication_Main_Screen("android.resource://com.example.carlosandres.wasd_app/"+R.raw.codteaser, "Esto es la verdadera guerra - CODWWII", "423", "120", "Iva025", "Envigado", R.drawable.newuser01));
 
 
         final Video_Publication_Adapter_Main_Screen itemsAdapter = new Video_Publication_Adapter_Main_Screen(items);
