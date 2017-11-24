@@ -158,9 +158,10 @@ public class Main_Main_Screen extends AppCompatActivity
             case R.id.action_about:
                 intent = new Intent(getApplicationContext(), About.class);
                 startActivity(intent);
+                break;
             case R.id.action_exit:
                 finish();
-                return true;
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
